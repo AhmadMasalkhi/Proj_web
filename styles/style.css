@@ -182,6 +182,40 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-top: 18px;
 }
 
+ .InputField,
+select,
+textarea,
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+} 
+
+
+.SummaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 16px 0 22px;
+}
+
+.SummaryCard {
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.SummaryCard p {
+  color: var(--muted-color);
+  margin-bottom: 6px;
+}
+
+.SummaryCard h3 {
+  margin: 0;
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
