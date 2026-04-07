@@ -84,6 +84,57 @@ h4 {
   padding: 30px 0;
 }
 
+.trusted-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  border-radius: 20px;
+  border: rgb(26, 172, 38) solid 2px;
+  margin: 20px 0;
+  padding: 28px 22px;
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.05);
+}
+.TrustedCopy {
+  display: grid;
+  gap: 12px;
+}
+
+.SectionTag {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.TrustedCopy h2 {
+  margin-bottom: 10px;
+  font-size: 2.1rem;
+}
+
+.TrustedCopy p {
+  color: var(--muted);
+  max-width: 560px;
+}
+
+.TrustedLogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.TrustedLogos span {
+  background: var(--border);
+  border-radius: 1000px;
+  padding: 12px 18px;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
 
 .hero {
 
@@ -288,4 +339,5 @@ left: 5%;
     flex-direction: column;
     left: 12%;
   }
+
 }
