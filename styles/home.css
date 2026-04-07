@@ -68,22 +68,23 @@
   padding: 60px 6%;
   text-align: center;
   width: 100%;
-  height: 500px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 10px;
+
 }
 
 .Hero h1 {
-  font-size: 300%;
+  font-size: 350%;
   text-align: center;
 }
 
 .Hero p {
-  font-size: 150%;
+  font-size: 200%;
 }
 
 .HeroActions {
@@ -92,7 +93,7 @@
   justify-content: center;
   margin-top: 20px;
   position: relative;
-  left: 5%;
+  left: 8.5%;
 }
 
 .Btn1 {
@@ -106,34 +107,51 @@
   border: 2px solid var(--primary);
 }
 
+.CategoryRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.Badge {
+  background: var(--accent);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 1000px;
+  font-weight: bold;
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .Hero {
     padding: 50px 8%;
-    height: 420px;
   }
 
   .Hero h1 {
-    font-size: 220%;
+        padding: 0 6%;
+    font-size: 270%;
   }
 
   .Hero p {
-    font-size: 120%;
+    font-size: 170%;
+  }
+  .HeroActions {
+    left: 17%;
   }
 }
 
 @media (max-width: 768px) {
   .Hero h1 {
-    font-size: 150%;
-    padding: 0 4%;
+    font-size: 200%;
+    padding: 0 10%;
   }
 
   .Hero p {
-    font-size: 100%;
+    font-size: 150%;
   }
   .HeroActions {
     flex-direction: column;
-    left: 12%;
+    left: 26%;
   }
 
 }
