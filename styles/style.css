@@ -23,7 +23,7 @@ body {
 }
 
 header {
-    padding: 0 20px;
+  padding: 0 20px;
   background: white;
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -56,36 +56,36 @@ h4 {
   padding: 16px 0;
 }
 
-.logo {
+.Logo {
   font-size: 24px;
   font-weight: bold;
   color: var(--primary);
 }
 
-.nav-links {
+.NavLinks {
   display: flex;
   gap: 14px;
   align-items: center;
 }
 
-.nav-links a {
+.NavLinks a {
   font-weight: bold;
 }
 
-.MenuToggle {
-    display: none;
-    background: transparent;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;    
+#MenuToggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.PageSection{
+.PageSection {
   padding: 30px 0;
-  margin:50px 0;
+  margin: 50px 0;
 }
 
-.trusted-section {
+.TrustedSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
@@ -94,6 +94,7 @@ h4 {
   padding: 28px 22px;
   box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.05);
 }
+
 .TrustedCopy {
   display: grid;
   gap: 12px;
@@ -136,40 +137,42 @@ h4 {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
 }
 
-.hero {
+.Hero {
 
- background-image: url("../img/hero.png");
+  background-image: url("../img/hero.png");
   background-size: cover;
   background-position: center;
   padding: 60px 6%;
   text-align: center;
   width: 100%;
-  height: 500px;    
-  display: flex ;
+  height: 500px;
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap  ;
-  align-items:flex-start;
-  justify-content:flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 10px;
 }
 
-.hero h1 {
-    font-size: 300%;
-text-align: center;
+.Hero h1 {
+  font-size: 300%;
+  text-align: center;
 }
-.hero p{
-    font-size: 150%;
+
+.Hero p {
+  font-size: 150%;
 }
+
 .HeroActions {
   display: flex;
   gap: 15px;
   justify-content: center;
   margin-top: 20px;
-position: relative;
-left: 5%;
+  position: relative;
+  left: 5%;
 }
 
-.btn {
+.Btn {
   display: inline-block;
   padding: 10px 14px;
   border: none;
@@ -177,21 +180,19 @@ left: 5%;
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  
 }
 
-.btn:hover {
+.Btn:hover {
   transform: translateY(-2px);
   opacity: 0.95;
 }
 
-.btn1 {
+.Btn1 {
   background: var(--primary);
   color: white;
 }
 
-.btn2 {
+.Btn2 {
   background: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
@@ -200,13 +201,14 @@ left: 5%;
 .PageSection {
   padding: 0.5% 3%;
 }
-.grid {
+
+.CardContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
 }
 
-.card {
+.Card {
   background: var(--surface);
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
@@ -215,37 +217,36 @@ left: 5%;
   animation: fadeIn 0.4s ease;
 }
 
-.card:hover {
+.Card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-.card img {
+.Card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.card-body {
+.CardBody {
   padding: 15px;
 }
 
-.card-title {
+.CardTitle {
   margin-bottom: 8px;
 }
 
-.card-text {
+.CardText {
   color: var(--muted);
   margin-bottom: 10px;
 }
 
-.btn-outline:hover {
+.BtnOutline:hover {
   background: var(--primary);
   color: white;
 }
 
 
-.footer {
+.Footer {
   background: var(--text);
   color: white;
   margin-top: 30px;
@@ -254,18 +255,18 @@ left: 5%;
 
 .FooterContainer {
   display: flex;
- align-items: center;
+  align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.footer a {
+.Footer a {
   display: block;
-  color: #dbe5ff;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
-.footer-copy {
+.FooterCopy {
   text-align: center;
   margin-top: 18px;
 }
@@ -280,20 +281,20 @@ left: 5%;
     gap: 10px;
   }
 
-  .nav-links {
+  .NavLinks {
     gap: 12px;
   }
 
-  .hero {
+  .Hero {
     padding: 50px 8%;
     height: 420px;
   }
 
-  .hero h1 {
+  .Hero h1 {
     font-size: 220%;
   }
 
-  .hero p {
+  .Hero p {
     font-size: 120%;
   }
 
@@ -302,7 +303,7 @@ left: 5%;
     padding-left: 0;
   }
 
-  .grid {
+  .CardContainer {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
@@ -311,14 +312,17 @@ left: 5%;
   .Navbar {
     flex-wrap: wrap;
   }
-.hero h1 {
+
+  .Hero h1 {
     font-size: 150%;
     padding: 0 4%;
-}
-.hero p{
+  }
+
+  .Hero p {
     font-size: 100%;
-}
-  .nav-links {
+  }
+
+  .NavLinks {
     width: 100%;
     display: none;
     flex-direction: column;
@@ -327,7 +331,7 @@ left: 5%;
     padding-top: 8px;
   }
 
-  .nav-links.open {
+  .NavLinks.open {
     display: flex;
   }
 
