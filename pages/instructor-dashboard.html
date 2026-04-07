@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="../styles/instructor-dashboard.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+    <div class="Navbar">
+      <a class="Logo" href="index.html">EduHub</a>
+      <nav id="NavLinks" class="NavLinks">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+        <a href="student-dashboard.html">Dashboard</a>
+        <a href="auth.html" id="Login" class="Btn Btn1">Login</a>
+      </nav>
+      <button id="MenuToggle" class="Hidden">Menu</button>
+    </div>
+  </header>
+
+
+
+
+<main class="PageSection" id="InstructorDashboard">
+    <h1>Instructor Dashboard</h1>
+    <p>Logged in as <strong id="InstructorEmail">-</strong></p>
+
+    <div id="InstructorSummary" class="SummaryGrid"></div>
+
+    <h2>Add or Edit Course</h2>
+    <form id="AddCourseForm" class="CourseForm">
+      <input id="CourseTitle" class="InputField" type="text" placeholder="Course title">
+      <input id="CourseInstructor" class="InputField" type="text" placeholder="Instructor name">
+      <input id="CourseCategory" class="InputField" type="text" placeholder="Category">
+      <input id="CourseLevel" class="InputField" type="text" placeholder="Level">
+      <input id="CoursePrice" class="InputField" type="number" placeholder="Price" value="0">
+      <input id="CourseImage" class="InputField" type="text" placeholder="Image URL">
+      <textarea id="CourseDescription" class="InputField" placeholder="Short description"></textarea>
+      <button type="submit" class="Btn Btn1">Save Course</button>
+    </form>
+
+    <section>
+      <h2>All Courses</h2>
+      <div id="CoursesGrid" class="CardContainer"></div>
+    </section>
+  </main>
+
+
+
+
+ <footer class="Footer">
+    <div class="FooterContainer">
+      <div>
+        <h4>EduHub</h4>
+        <p>Learn skills for your future through online courses and simple progress tracking.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="auth.html">Login</a>
+      </div>
+      <div>
+        <h4>Dashboards</h4>
+        <a href="student-dashboard.html">Student Dashboard</a>
+        <a href="instructor-dashboard.html">Instructor Dashboard</a>
+      </div>
+    </div>
+    <p class="FooterCopy">© 2026 EduHub. All rights reserved.</p>
+  </footer>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/courses.js"></script><script src="../scripts/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.ProfileLayout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+}
+
+.ProfileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .ProfileLayout {
+    grid-template-columns: 1fr;
+  }
+}

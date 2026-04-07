@@ -1,0 +1,29 @@
+.Btn1 {
+  background: var(--primary);
+  color: white;
+}
+
+.Btn2 {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.Auth {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.AuthSwitch {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.AuthPanel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+}
+

@@ -2,11 +2,6 @@
   display: grid;
   gap: 30px;
 }
-
-.List {
-  list-style: none;
-  padding: 0;
-}
 .List li {
   margin-bottom: 8px;
   padding-left: 20px;

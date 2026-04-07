@@ -209,12 +209,19 @@ input {
 }
 
 .SummaryCard p {
-  color: var(--muted-color);
+  color: var(--muted);
   margin-bottom: 6px;
 }
 
 .SummaryCard h3 {
   margin: 0;
+}
+
+
+
+.List {
+  list-style: none;
+  padding: 0;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -255,3 +262,4 @@ input {
     display: inline-block;
   }
 }
+

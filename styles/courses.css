@@ -1,0 +1,10 @@
+
+.Controls {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.FavoriteCard {
+  border: 2px solid var(--primary);
+}

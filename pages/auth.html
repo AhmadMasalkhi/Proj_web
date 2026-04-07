@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>EduHub - Login</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/auth.css">
+</head>
+<body>
+    <header>
+    <div class="Navbar">
+      <a class="Logo" href="index.html">EduHub</a>
+      <nav id="NavLinks" class="NavLinks">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="profile.html">Profile</a>
+        <a href="student-dashboard.html">Dashboard</a>
+        <a href="auth.html" id="Login" class="Btn Btn1">Login</a>
+      </nav>
+      <button id="MenuToggle" class="Hidden">Menu</button>
+    </div>
+  </header>
+
+
+
+
+<main class="PageSection">
+    <div class="Auth">
+      <h1>Welcome</h1>
+      <div class="AuthSwitch">
+        <button id="ShowLogin" class="Btn Btn1">Login</button>
+        <button id="ShowSignup" class="Btn Btn2">Sign Up</button>
+      </div>
+
+      <div id="LoginForm" class="AuthPanel">
+        <label class="Label" >Email</label>
+        <input id="LoginEmail" type="email" class="InputField" placeholder="Enter your email">
+        <label class="Label" for="LoginPassword">Password</label>
+        <input id="LoginPassword" type="password" class="InputField" placeholder="Enter your password">
+        <button id="LoginSubmit" class="Btn Btn1">Log In</button>
+      </div>
+
+      <div id="SignupForm" class="AuthPanel Hidden">
+        <label class="Label" for="SignupName">Name</label>
+        <input id="SignupName" type="text" class="InputField" placeholder="Enter your name">
+        <label class="Label" for="SignupEmail">Email</label>
+        <input id="SignupEmail" type="email" class="InputField" placeholder="Enter your email">
+        <label class="Label" for="SignupPassword">Password</label>
+        <input id="SignupPassword" type="password" class="InputField" placeholder="Create a password">
+        <label class="Label" for="SignupConfirmPassword">Confirm Password</label>
+        <input id="SignupConfirmPassword" type="password" class="InputField" placeholder="Confirm your password">
+        <label class="Label" for="SignupRole">Role</label>
+        <select id="SignupRole" class="InputField">
+          <option value="student">Student</option>
+          <option value="instructor">Instructor</option>
+        </select>
+        <button id="SignupSubmit" class="Btn Btn1">Create Account</button>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="Footer">
+    <div class="FooterContainer">
+      <div>
+        <h4>EduHub</h4>
+        <p>Learn skills for your future through online courses and simple progress tracking.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="auth.html">Login</a>
+      </div>
+      <div>
+        <h4>Dashboards</h4>
+        <a href="student-dashboard.html">Student Dashboard</a>
+        <a href="instructor-dashboard.html">Instructor Dashboard</a>
+      </div>
+    </div>
+    <p class="FooterCopy">© 2026 EduHub. All rights reserved.</p>
+  </footer>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/auth.js"></script>
+</body>
+</html>
