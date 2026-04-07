@@ -80,8 +80,9 @@ h4 {
     cursor: pointer;    
 }
 
-.page-section {
+.PageSection{
   padding: 30px 0;
+  margin:50px 0;
 }
 
 .trusted-section {
@@ -90,7 +91,6 @@ h4 {
   gap: 24px;
   border-radius: 20px;
   border: rgb(26, 172, 38) solid 2px;
-  margin: 20px 0;
   padding: 28px 22px;
   box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.05);
 }
