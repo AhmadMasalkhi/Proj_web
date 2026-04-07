@@ -209,7 +209,7 @@ input {
 }
 
 .SummaryCard p {
-  color: var(--muted-color);
+  color: var(--muted);
   margin-bottom: 6px;
 }
 
