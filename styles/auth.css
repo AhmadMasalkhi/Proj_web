@@ -9,7 +9,7 @@
   border: 2px solid var(--primary);
 }
 
-.AuthWrapper {
+.Auth {
   max-width: 560px;
   margin: 0 auto;
 }
