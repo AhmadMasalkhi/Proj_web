@@ -217,6 +217,13 @@ input {
   margin: 0;
 }
 
+
+
+.List {
+  list-style: none;
+  padding: 0;
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
   header {
     padding: 0 30px;
@@ -255,3 +262,4 @@ input {
     display: inline-block;
   }
 }
+
