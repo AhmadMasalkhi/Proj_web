@@ -12,6 +12,42 @@
   margin-bottom: 12px;
 }
 
+.ProfileSidebarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ProfileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ProfileNavLink {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid lightgray;
+  transition: all 0.2s ease;
+}
+
+.ProfileFormGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.FormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 @media (max-width: 768px) {
   .ProfileLayout {
     grid-template-columns: 1fr;

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Profile</title>
-  <link rel="stylesheet" href="../styles/profile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
   <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/profile.css">
 </head>
-
-
 
 <body>
   <header>
@@ -26,115 +24,104 @@
     </div>
   </header>
 
-    <main class="PageSection">
+  <main class="PageSection">
     <div class="ProfileLayout">
-      <aside class="Card ProfileSidebar">
+      <aside class="Card">
         <div class="CardBody ProfileSidebarContent">
-          <div class="ProfileHeader">
+          <div>
             <img
               src="https://placehold.co/140x140"
               alt="Student profile picture"
               class="ProfileImage"
             >
-            <h2 class="ProfileName">Student Name</h2>
-            <p class="ProfileRole">Student Account</p>
+            <h2 id="studentName">Student Name</h2>
+            <p class="CardText">Student Account</p>
           </div>
 
           <nav class="ProfileNav">
-            <a class="ProfileNavLink Active" href="profile.html">
-              User Info
-            </a>
-            <a class="ProfileNavLink" href="student-dashboard.html">
-              Dashboard
-            </a>
-            <a class="ProfileNavLink" href="wishlist.html">
-              Wishlist
-            </a>
+            <a class="ProfileNavLink" href="profile.html">User Info</a>
+            <a class="ProfileNavLink" href="student-dashboard.html">Dashboard</a>
+            <a class="ProfileNavLink" href="wishlist.html">Wishlist</a>
           </nav>
         </div>
       </aside>
 
-      <section class="ProfileContent">
-        <div id="info-section" class="Card ProfilePanel">
-          <div class="CardBody">
-            <p class="SectionTag">Profile</p>
-            <h1>Personal Information</h1>
-            <p class="CardText">
-              Update your personal details and public profile information.
-            </p>
+      <section class="Card">
+        <div class="CardBody">
+          <p class="SectionTag">Profile</p>
+          <h1>Personal Information</h1>
+          <p class="CardText">
+            Update your personal details and public profile information.
+          </p>
 
-            <form class="ProfileForm">
-              <div class="ProfileFormGrid">
-                <div class="FormGroup">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" class="InputField" placeholder="Enter first name">
-                </div>
-
-                <div class="FormGroup">
-                  <label for="lastName">Family Name</label>
-                  <input type="text" id="lastName" class="InputField" placeholder="Enter family name">
-                </div>
-
-                <div class="FormGroup">
-                  <label for="email">Email Address</label>
-                  <input type="email" id="email" class="InputField" placeholder="Enter email address">
-                </div>
-
-                <div class="FormGroup">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" class="InputField" placeholder="Enter phone number">
-                </div>
-
-                <div class="FormGroup">
-                  <label for="linkedin">LinkedIn</label>
-                  <input type="url" id="linkedin" class="InputField" placeholder="Paste LinkedIn profile URL">
-                </div>
-
-                <div class="FormGroup">
-                  <label for="country">Country</label>
-                  <input type="text" id="country" class="InputField" placeholder="Enter country">
-                </div>
+          <form>
+            <div class="ProfileFormGrid">
+              <div class="FormGroup">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="InputField" placeholder="Enter first name">
               </div>
 
               <div class="FormGroup">
-                <label for="bio">Short Bio</label>
-                <textarea id="bio" rows="4" placeholder="Write a short introduction about yourself"></textarea>
+                <label for="lastName">Family Name</label>
+                <input type="text" id="lastName" class="InputField" placeholder="Enter family name">
               </div>
 
-              <div class="ProfileActions">
-                <button type="submit" class="Btn">Save Changes</button>
+              <div class="FormGroup">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="InputField" placeholder="Enter email address">
               </div>
-            </form>
-          </div>
+
+              <div class="FormGroup">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="InputField" placeholder="Enter phone number">
+              </div>
+
+              <div class="FormGroup">
+                <label for="linkedin">LinkedIn</label>
+                <input type="url" id="linkedin" class="InputField" placeholder="Paste LinkedIn profile URL">
+              </div>
+
+              <div class="FormGroup">
+                <label for="country">Country</label>
+                <input type="text" id="country" class="InputField" placeholder="Enter country">
+              </div>
+            </div>
+
+            <div class="FormGroup">
+              <label for="bio">Short Bio</label>
+              <textarea id="bio" rows="4" placeholder="Write a short introduction about yourself"></textarea>
+            </div>
+
+            <br>
+            <button type="submit" class="Btn">Save Changes</button>
+          </form>
         </div>
       </section>
     </div>
   </main>
 
   <footer class="Footer">
-      <div class="FooterContainer">
-        <div>
-          <h4>EduHub</h4>
-          <p>Learn skills for your future through online courses and simple progress tracking.</p>
-        </div>
-
-        <div>
-          <h4>Pages</h4>
-          <a href="index.html">Home</a>
-          <a href="courses.html">Courses</a>
-          <a href="auth.html">Login</a>
-        </div>
-
-        <div>
-          <h4>Dashboards</h4>
-          <a href="student-dashboard.html">Student Dashboard</a>
-          <a href="instructor-dashboard.html">Instructor Dashboard</a>
-        </div>
+    <div class="FooterContainer">
+      <div>
+        <h4>EduHub</h4>
+        <p>Learn skills for your future through online courses and simple progress tracking.</p>
       </div>
 
-      <p class="FooterCopy">© 2026 EduHub. All rights reserved.</p>
+      <div>
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="profile.html">Profile</a>
+      </div>
+
+      <div>
+        <h4>Dashboards</h4>
+        <a href="student-dashboard.html">Student Dashboard</a>
+        <a href="instructor-dashboard.html">Instructor Dashboard</a>
+      </div>
+    </div>
+
+    <p class="FooterCopy">© 2026 EduHub. All rights reserved.</p>
   </footer>
-
-
 </body>
 </html>
