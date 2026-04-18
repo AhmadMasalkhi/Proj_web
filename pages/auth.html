@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../styles/auth.css">
 </head>
 <body>
-    <header>
+   <header>
     <div class="Navbar">
       <a class="Logo" href="index.html">EduHub</a>
       <nav id="NavLinks" class="NavLinks">
@@ -23,45 +23,50 @@
     </div>
   </header>
 
-
-
-
 <main class="PageSection">
-    <div class="Auth">
-      <h1>Welcome</h1>
-      <div class="AuthSwitch">
-        <button id="ShowLogin" class="Btn Btn1">Login</button>
-        <button id="ShowSignup" class="Btn Btn2">Sign Up</button>
-      </div>
+  <div class="Auth">
+    <h1>Welcome</h1>
 
-      <div id="LoginForm" class="AuthPanel">
-        <label class="Label" >Email</label>
-        <input id="LoginEmail" type="email" class="InputField" placeholder="Enter your email">
-        <label class="Label" for="LoginPassword">Password</label>
-        <input id="LoginPassword" type="password" class="InputField" placeholder="Enter your password">
-        <button id="LoginSubmit" class="Btn Btn1">Log In</button>
-      </div>
-
-      <div id="SignupForm" class="AuthPanel Hidden">
-        <label class="Label" for="SignupName">Name</label>
-        <input id="SignupName" type="text" class="InputField" placeholder="Enter your name">
-        <label class="Label" for="SignupEmail">Email</label>
-        <input id="SignupEmail" type="email" class="InputField" placeholder="Enter your email">
-        <label class="Label" for="SignupPassword">Password</label>
-        <input id="SignupPassword" type="password" class="InputField" placeholder="Create a password">
-        <label class="Label" for="SignupConfirmPassword">Confirm Password</label>
-        <input id="SignupConfirmPassword" type="password" class="InputField" placeholder="Confirm your password">
-        <label class="Label" for="SignupRole">Role</label>
-        <select id="SignupRole" class="InputField">
-          <option value="student">Student</option>
-          <option value="instructor">Instructor</option>
-        </select>
-        <button id="SignupSubmit" class="Btn Btn1">Create Account</button>
-      </div>
+    <div class="AuthSwitch">
+      <button id="ShowLogin" class="Btn Btn1 active">Login</button>
+      <button id="ShowSignup" class="Btn Btn2">Sign Up</button>
     </div>
-  </main>
 
+    <form id="LoginForm" class="AuthPanel">
+      <label class="Label">Email</label>
+      <input id="LoginEmail" type="email" class="InputField" placeholder="Enter your email" required>
 
+      <label class="Label">Password</label>
+      <input id="LoginPassword" type="password" class="InputField" placeholder="Enter your password" required>
+
+      <button type="submit" id="LoginSubmit" class="Btn Btn1">Log In</button>
+    </form>
+
+    <form id="SignupForm" class="AuthPanel Hidden">
+      <label class="Label">Name</label>
+      <input id="SignupName" type="text" class="InputField" placeholder="Enter your name" required>
+
+      <label class="Label">Email</label>
+      <input id="SignupEmail" type="email" class="InputField" placeholder="Enter your email" required>
+
+      <label class="Label">Password</label>
+      <input id="SignupPassword" type="password" class="InputField" placeholder="Create a password" required>
+
+      <label class="Label">Confirm Password</label>
+      <input id="SignupConfirmPassword" type="password" class="InputField" placeholder="Confirm your password" required>
+
+      <label class="Label">Role</label>
+      <select id="SignupRole" class="InputField">
+        <option value="student">Student</option>
+        <option value="instructor">Instructor</option>
+      </select>
+
+      <button type="submit" id="SignupSubmit" class="Btn Btn1">Create Account</button>
+    </form>
+
+    <p id="AuthMessage" style="margin-top:10px;"></p>
+  </div>
+</main>
 
   <footer class="Footer">
     <div class="FooterContainer">
@@ -84,7 +89,7 @@
     </div>
     <p class="FooterCopy">© 2026 EduHub. All rights reserved.</p>
   </footer>
-  <script src="../scripts/main.js"></script>
-  <script src="../scripts/auth.js"></script>
+  <script src="../data/main.js"></script>
+  <script src="../data/auth.js"></script>
 </body>
 </html>
