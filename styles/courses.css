@@ -3,8 +3,89 @@
   display: grid;
   gap: 15px;
   margin-bottom: 20px;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 0 8px black;
+  padding: 18px;
 }
 
 .FavoriteCard {
   border: 2px solid var(--primary);
+}
+
+.CoursesHero {
+  margin-bottom: 20px;
+}
+
+.CoursesIntro {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.TopControls {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.FilterGroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.FilterGroup {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.FilterGroup h4 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.FilterGroup label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.FilterGroup input[type="checkbox"] {
+  width: auto;
+}
+
+.ExtraActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.SavedOnlyLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.SavedOnlyLabel input {
+  width: auto;
+}
+
+.ResetBtn {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.ResetBtn:hover {
+  background: var(--accent);
 }
