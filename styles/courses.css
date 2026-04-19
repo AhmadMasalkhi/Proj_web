@@ -89,3 +89,9 @@
 .ResetBtn:hover {
   background: var(--accent);
 }
+
+@media (max-width: 768px) {
+  .TopControls {
+    grid-template-columns: 1fr;
+  }
+}
