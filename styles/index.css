@@ -4,29 +4,20 @@
   padding: 0;
 }
 
-:root {
-  --primary: #16A34A;
-  --primary-dark: #15803D;
-  --background: #F0FDF4;
-  --surface: #FFFFFF;
-  --text: #14532D;
-  --muted: #4D7C5A;
-  --border: #BBF7D0;
-  --accent: #DCFCE7;
-}
-
 .TrustedSection {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 50px;
   border-radius: 20px;
-  border: rgb(26, 172, 38) solid 2px;
+margin-top: 30px;
   padding: 28px 22px;
-  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 40px 40px 40px 40px rgba(0, 0, 0, 0.05);
 }
 
 .TrustedCopy {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 

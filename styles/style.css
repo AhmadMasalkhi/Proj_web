@@ -7,7 +7,7 @@
 :root {
   --primary: #16A34A;
   --primary-dark: #15803D;
-  --background: #F0FDF4;
+  --background: #f7fffa;
   --surface: #FFFFFF;
   --text: #14532D;
   --muted: #4D7C5A;
@@ -258,9 +258,6 @@ input {
   flex-direction: column;
   height: 100%;
 }
-.CardTitle {
-  min-height: 52px;
-}
 
 .CourseImageWrap {
   position: relative;
@@ -309,14 +306,12 @@ input {
   color: var(--muted);
   margin-bottom: 10px;
   font-size: 14px;
-  min-height: 40px;
 }
 
 .CourseDesc {
   color: var(--muted);
   margin-bottom: 14px;
-  min-height: 72px;
-  overflow: hidden;
+  min-height: 48px;
 }
 
 .CourseBottom {
