@@ -133,12 +133,12 @@ let resetFilters = document.getElementById("ResetFilters");
 let allFilterCheckboxes = document.querySelectorAll('.FilterGroup input[type="checkbox"]');
 
 function getCheckedValues(name) {
-  let checkedInputs = document.querySelectorAll('input[name="' + name + '"]:checked');
+  let checkedInputs = document.querySelectorAll(`input[name="${name}"]:checked`);
   let values = [];
 
-  checkedInputs.forEach(function (input) {
-    values.push(input.value);
-  });
+ for (let i = 0; i < checkedInputs.length; i++) {
+  values.push(checkedInputs[i].value);
+}
 
   return values;
 }
