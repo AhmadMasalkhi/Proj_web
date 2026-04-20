@@ -131,3 +131,103 @@ let sortFilter = document.getElementById("SortFilter");
 let savedOnly = document.getElementById("SavedOnly");
 let resetFilters = document.getElementById("ResetFilters");
 let allFilterCheckboxes = document.querySelectorAll('.FilterGroup input[type="checkbox"]');
+
+function getCheckedValues(name) {
+  let checkedInputs = document.querySelectorAll('input[name="' + name + '"]:checked');
+  let values = [];
+
+  checkedInputs.forEach(function (input) {
+    values.push(input.value);
+  });
+
+  return values;
+}
+
+function formatText(text) {
+  return text
+    .replaceAll("-", " ")
+    .replaceAll("_", " ")
+    .replace(/\b\w/g, function (char) {
+      return char.toUpperCase();
+    });
+}
+
+function getVisibleCourses() {
+  let query = searchQuery.value.trim().toLowerCase();
+
+  let selectedCategories = getCheckedValues("category");
+  let selectedLevels = getCheckedValues("level");
+  let selectedEducators = getCheckedValues("educator");
+  let selectedLearningTypes = getCheckedValues("learningType");
+  let selectedLanguages = getCheckedValues("language");
+
+  let result = courses.filter(function (course) {
+    let matchesSearch =
+      course.title.toLowerCase().includes(query) ||
+      course.instructor.toLowerCase().includes(query);
+
+    let matchesCategory =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(course.category);
+
+    let matchesLevel =
+      selectedLevels.length === 0 ||
+      selectedLevels.includes(course.level);
+
+    let matchesEducator =
+      selectedEducators.length === 0 ||
+      selectedEducators.includes(course.instructor.toLowerCase());
+
+    let matchesLearningType =
+      selectedLearningTypes.length === 0 ||
+      selectedLearningTypes.includes(course.learningType);
+
+    let matchesLanguage =
+      selectedLanguages.length === 0 ||
+      selectedLanguages.includes(course.language);
+
+    let matchesSaved =
+      !savedOnly.checked || savedCourseIds.includes(course.id);
+
+    return (
+      matchesSearch &&
+      matchesCategory &&
+      matchesLevel &&
+      matchesEducator &&
+      matchesLearningType &&
+      matchesLanguage &&
+      matchesSaved
+    );
+  } );
+
+  if (sortFilter.value === "title-asc") {
+    result.sort(function (a, b) {
+      return a.title.localeCompare(b.title);
+    });
+  } else if (sortFilter.value === "title-desc") {
+    result.sort(function (a, b) {
+      return b.title.localeCompare(a.title);
+    });
+  } else if (sortFilter.value === "price-asc") {
+    result.sort(function (a, b) {
+      return parseFloat(a.price) - parseFloat(b.price);
+    });
+  } else if (sortFilter.value === "price-desc") {
+    result.sort(function (a, b) {
+      return parseFloat(b.price) - parseFloat(a.price);
+    });
+  } else if (sortFilter.value === "rating-desc") {
+    result.sort(function (a, b) {
+      return parseFloat(b.rating) - parseFloat(a.rating);
+    });
+  } else {
+    result.sort(function (a, b) {
+      return parseInt(a.id) - parseInt(b.id);
+    });
+  }
+
+  return result;
+}
+
+
+
