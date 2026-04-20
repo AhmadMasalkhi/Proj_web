@@ -60,6 +60,12 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
 }
 
+.TrustedLogos span img {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  border-radius: 1000px;
+}
 .Hero {
 
   background-image: url("../img/hero.png");
@@ -95,16 +101,7 @@
   position: relative;
   left: 8.5%;
 }
-.Btn1 {
-  background: var(--primary);
-  color: white;
-}
 
-.Btn2 {
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-}
 
 .CategoryRow {
   display: flex;
