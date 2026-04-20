@@ -357,6 +357,44 @@ function resetAllFilters() {
   renderCourses();
 }
 
+function SaveButton(event) {
+  let saveButton = event.target.closest(".SaveBtn");
 
+  if (!saveButton) {
+    return;
+  }
+
+  let courseId = saveButton.dataset.id;
+
+  if (savedCourseIds.includes(courseId)) {
+    let newSavedCourses = [];
+
+    for (let i = 0; i < savedCourseIds.length; i++) {
+      if (savedCourseIds[i] !== courseId) {
+        newSavedCourses.push(savedCourseIds[i]);
+      }
+    }
+
+    savedCourseIds = newSavedCourses;
+  } else {
+    savedCourseIds.push(courseId);
+  }
+
+  localStorage.setItem("savedCourses", JSON.stringify(savedCourseIds));
+  renderCourses();
+}
+
+coursesGrid.addEventListener("click", SaveButton);
+
+for (let i = 0; i < allFilterCheckboxes.length; i++) {
+  allFilterCheckboxes[i].addEventListener("change", renderCourses);
+}
+
+searchQuery.addEventListener("input", renderCourses);
+sortFilter.addEventListener("change", renderCourses);
+savedOnly.addEventListener("change", renderCourses);
+resetFilters.addEventListener("click", resetAllFilters);
+
+renderCourses();
 
 
