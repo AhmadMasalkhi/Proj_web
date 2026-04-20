@@ -1,13 +1,66 @@
-.AboutGrid{
+.AboutHero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.AboutHero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.AboutHero p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.AboutGrid {
   display: grid;
   gap: 30px;
 }
+
+@media (min-width: 768px) {
+  .AboutGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.List {
+  list-style: none;
+  padding: 0;
+}
+
 .List li {
-  margin-bottom: 8px;
-  padding-left: 20px;
+  margin-bottom: 10px;
+  padding-left: 22px;
   position: relative;
 }
+
+.List li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 14px;
+}
+
 .List li a {
   color: var(--primary);
   text-decoration: none;
+}
+.Card {
+  transition: 0.3s ease;
+}
+
+.Card:hover {
+  transform: translateY(-4px);
+}
+
+.CardBody h2 {
+  margin-bottom: 10px;
+}
+
+.CardText {
+  line-height: 1.6;
+  color: #444;
 }
