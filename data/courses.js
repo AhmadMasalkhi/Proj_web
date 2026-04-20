@@ -133,12 +133,12 @@ let resetFilters = document.getElementById("ResetFilters");
 let allFilterCheckboxes = document.querySelectorAll('.FilterGroup input[type="checkbox"]');
 
 function getCheckedValues(name) {
-  let checkedInputs = document.querySelectorAll('input[name="' + name + '"]:checked');
+  let checkedInputs = document.querySelectorAll(`input[name="${name}"]:checked`);
   let values = [];
 
-  checkedInputs.forEach(function (input) {
-    values.push(input.value);
-  });
+ for (let i = 0; i < checkedInputs.length; i++) {
+  values.push(checkedInputs[i].value);
+}
 
   return values;
 }
@@ -229,5 +229,172 @@ function getVisibleCourses() {
   return result;
 }
 
+function createCourseCard(course) {
+  let isSaved = false;
+
+  if (savedCourseIds.includes(course.id)) {
+    isSaved = true;
+  }
+
+  let cardClass = "Card CourseCard";
+  if (isSaved) {
+    cardClass = "Card CourseCard FavoriteCard";
+  }
+
+  let buttonText = "Save";
+  if (isSaved) {
+    buttonText = "Saved";
+  }
+
+  return `
+    <div class="${cardClass}">
+      <div class="CourseImageWrap">
+        <img src="${course.image}" alt="${course.title}">
+        <span class="CourseBadge">${formatText(course.level)}</span>
+      </div>
+
+      <div class="CardBody">
+        <div class="CourseTopRow">
+          <p class="CourseInstructor">${course.instructor}</p>
+          <p class="CourseRating">⭐ ${course.rating}</p>
+        </div>
+
+        <h3 class="CardTitle">${course.title}</h3>
+
+        <p class="CourseMetaLine">
+          ${formatText(course.category)} • ${formatText(course.language)} • ${formatText(course.learningType)}
+        </p>
+
+        <p class="CourseDesc">${course.description}</p>
+
+        <div class="CourseBottom">
+          <p class="CoursePrice">$${parseFloat(course.price).toFixed(2)}</p>
+
+          <div class="CourseActions">
+            <a href="course-details.html?id=${course.id}" class="Btn CourseBtn">View Details</a>
+            <button class="Btn SaveBtn" data-id="${course.id}">${buttonText}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
+
+function renderSummary(visibleCourses) {
+  let totalCourses = courses.length;
+  let visibleCount = visibleCourses.length;
+  let savedCount = savedCourseIds.length;
+
+  let categories = [];
+
+  for (let i = 0; i < visibleCourses.length; i++) {
+    if (!categories.includes(visibleCourses[i].category)) {
+      categories.push(visibleCourses[i].category);
+    }
+  }
+
+  let visibleCategories = categories.length;
+
+  coursesSummary.innerHTML = `
+    <div class="SummaryCard">
+      <p>Total Courses</p>
+      <h3>${totalCourses}</h3>
+    </div>
+
+    <div class="SummaryCard">
+      <p>Showing</p>
+      <h3>${visibleCount}</h3>
+    </div>
+
+    <div class="SummaryCard">
+      <p>Saved Courses</p>
+      <h3>${savedCount}</h3>
+    </div>
+
+    <div class="SummaryCard">
+      <p>Visible Categories</p>
+      <h3>${visibleCategories}</h3>
+    </div>
+  `;
+}
+
+function renderCourses() {
+  let visibleCourses = getVisibleCourses();
+
+  renderSummary(visibleCourses);
+
+  if (visibleCourses.length === 0) {
+    coursesGrid.innerHTML = `
+      <div class="EmptyState">
+        <h3>No courses found</h3>
+        <p>Try changing the search text or filters.</p>
+      </div>
+    `;
+  } else {
+    let cards = "";
+
+    for (let i = 0; i < visibleCourses.length; i++) {
+      cards = cards + createCourseCard(visibleCourses[i]);
+    }
+
+    coursesGrid.innerHTML = cards;
+  }
+}
+
+function resetAllFilters() {
+  searchQuery.value = "";
+  sortFilter.value = "default";
+  savedOnly.checked = false;
+
+  let checkboxes = document.querySelectorAll('.FilterGroup input[type="checkbox"]');
+
+  for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = false;
+  }
+
+  renderCourses();
+}
+
+function SaveButton(event) {
+  let saveButton = event.target.closest(".SaveBtn");
+
+  if (!saveButton) {
+    return;
+  }
+
+  let courseId = saveButton.dataset.id;
+
+  if (savedCourseIds.includes(courseId)) {
+    let newSavedCourses = [];
+
+    for (let i = 0; i < savedCourseIds.length; i++) {
+      if (savedCourseIds[i] !== courseId) {
+        newSavedCourses.push(savedCourseIds[i]);
+      }
+    }
+
+    savedCourseIds = newSavedCourses;
+  } else {
+    savedCourseIds.push(courseId);
+  }
+
+  localStorage.setItem("savedCourses", JSON.stringify(savedCourseIds));
+  renderCourses();
+}
+
+coursesGrid.addEventListener("click", SaveButton);
+
+for (let i = 0; i < allFilterCheckboxes.length; i++) {
+  allFilterCheckboxes[i].addEventListener("change", renderCourses);
+}
+
+searchQuery.addEventListener("input", renderCourses);
+sortFilter.addEventListener("change", renderCourses);
+savedOnly.addEventListener("change", renderCourses);
+resetFilters.addEventListener("click", resetAllFilters);
+
+renderCourses();
 
 

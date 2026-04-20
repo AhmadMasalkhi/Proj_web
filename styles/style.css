@@ -258,6 +258,9 @@ input {
   flex-direction: column;
   height: 100%;
 }
+.CardTitle {
+  min-height: 52px;
+}
 
 .CourseImageWrap {
   position: relative;
@@ -306,12 +309,14 @@ input {
   color: var(--muted);
   margin-bottom: 10px;
   font-size: 14px;
+  min-height: 40px;
 }
 
 .CourseDesc {
   color: var(--muted);
   margin-bottom: 14px;
-  min-height: 48px;
+  min-height: 72px;
+  overflow: hidden;
 }
 
 .CourseBottom {
