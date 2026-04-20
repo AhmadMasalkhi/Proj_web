@@ -320,5 +320,43 @@ function renderSummary(visibleCourses) {
   `;
 }
 
+function renderCourses() {
+  let visibleCourses = getVisibleCourses();
+
+  renderSummary(visibleCourses);
+
+  if (visibleCourses.length === 0) {
+    coursesGrid.innerHTML = `
+      <div class="EmptyState">
+        <h3>No courses found</h3>
+        <p>Try changing the search text or filters.</p>
+      </div>
+    `;
+  } else {
+    let cards = "";
+
+    for (let i = 0; i < visibleCourses.length; i++) {
+      cards = cards + createCourseCard(visibleCourses[i]);
+    }
+
+    coursesGrid.innerHTML = cards;
+  }
+}
+
+function resetAllFilters() {
+  searchQuery.value = "";
+  sortFilter.value = "default";
+  savedOnly.checked = false;
+
+  let checkboxes = document.querySelectorAll('.FilterGroup input[type="checkbox"]');
+
+  for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = false;
+  }
+
+  renderCourses();
+}
+
+
 
 
