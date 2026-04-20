@@ -282,6 +282,43 @@ function createCourseCard(course) {
 
 
 
+function renderSummary(visibleCourses) {
+  let totalCourses = courses.length;
+  let visibleCount = visibleCourses.length;
+  let savedCount = savedCourseIds.length;
+
+  let categories = [];
+
+  for (let i = 0; i < visibleCourses.length; i++) {
+    if (!categories.includes(visibleCourses[i].category)) {
+      categories.push(visibleCourses[i].category);
+    }
+  }
+
+  let visibleCategories = categories.length;
+
+  coursesSummary.innerHTML = `
+    <div class="SummaryCard">
+      <p>Total Courses</p>
+      <h3>${totalCourses}</h3>
+    </div>
+
+    <div class="SummaryCard">
+      <p>Showing</p>
+      <h3>${visibleCount}</h3>
+    </div>
+
+    <div class="SummaryCard">
+      <p>Saved Courses</p>
+      <h3>${savedCount}</h3>
+    </div>
+
+    <div class="SummaryCard">
+      <p>Visible Categories</p>
+      <h3>${visibleCategories}</h3>
+    </div>
+  `;
+}
 
 
 
