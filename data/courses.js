@@ -229,5 +229,59 @@ function getVisibleCourses() {
   return result;
 }
 
+function createCourseCard(course) {
+  let isSaved = false;
+
+  if (savedCourseIds.includes(course.id)) {
+    isSaved = true;
+  }
+
+  let cardClass = "Card CourseCard";
+  if (isSaved) {
+    cardClass = "Card CourseCard FavoriteCard";
+  }
+
+  let buttonText = "Save";
+  if (isSaved) {
+    buttonText = "Saved";
+  }
+
+  return `
+    <div class="${cardClass}">
+      <div class="CourseImageWrap">
+        <img src="${course.image}" alt="${course.title}">
+        <span class="CourseBadge">${formatText(course.level)}</span>
+      </div>
+
+      <div class="CardBody">
+        <div class="CourseTopRow">
+          <p class="CourseInstructor">${course.instructor}</p>
+          <p class="CourseRating">⭐ ${course.rating}</p>
+        </div>
+
+        <h3 class="CardTitle">${course.title}</h3>
+
+        <p class="CourseMetaLine">
+          ${formatText(course.category)} • ${formatText(course.language)} • ${formatText(course.learningType)}
+        </p>
+
+        <p class="CourseDesc">${course.description}</p>
+
+        <div class="CourseBottom">
+          <p class="CoursePrice">$${parseFloat(course.price).toFixed(2)}</p>
+
+          <div class="CourseActions">
+            <a href="course-details.html?id=${course.id}" class="Btn CourseBtn">View Details</a>
+            <button class="Btn SaveBtn" data-id="${course.id}">${buttonText}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
+
+
 
 
