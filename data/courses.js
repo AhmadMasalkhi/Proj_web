@@ -131,6 +131,7 @@ let sortFilter = document.getElementById("SortFilter");
 let savedOnly = document.getElementById("SavedOnly");
 let resetFilters = document.getElementById("ResetFilters");
 let allFilterCheckboxes = document.querySelectorAll('.FilterGroup input[type="checkbox"]');
+let toggleButtons = document.querySelectorAll(".ToggleFilterBtn");
 
 function getCheckedValues(name) {
   let checkedInputs = document.querySelectorAll(`input[name="${name}"]:checked`);
@@ -357,6 +358,24 @@ function resetAllFilters() {
   renderCourses();
 }
 
+function toggleFilters() {
+  for (let i = 0; i < toggleButtons.length; i++) {
+    toggleButtons[i].addEventListener("click", function () {
+      let filterGroup = this.closest(".FilterGroup");
+      let options = filterGroup.querySelector(".FilterOptions");
+
+      if (options.classList.contains("collapsed")) {
+        options.classList.remove("collapsed");
+        this.textContent = "▲";
+      } else {
+        options.classList.add("collapsed");
+        this.textContent = "▼";
+      }
+    });
+  }
+}
+
+
 function SaveButton(event) {
   let saveButton = event.target.closest(".SaveBtn");
 
@@ -395,6 +414,7 @@ sortFilter.addEventListener("change", renderCourses);
 savedOnly.addEventListener("change", renderCourses);
 resetFilters.addEventListener("click", resetAllFilters);
 
+toggleFilters();
 renderCourses();
 
 
