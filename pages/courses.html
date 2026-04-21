@@ -31,7 +31,8 @@
         and explore the best learning path for your future.
       </p>
     </div>
-
+ <section class="CoursesLayout">
+    <aside class="FiltersSidebar">
     <div class="Controls">
       <div class="TopControls">
       <input type="text" id="SearchQuery" class="InputField" placeholder="Search by course title or instructor">
@@ -49,8 +50,14 @@
       </div>
 
 <div class="FilterGroups">
+  
         <div class="FilterGroup">
-          <h4>Category</h4>
+           <div class="FilterHeader">
+            <h4>Category</h4>
+            <button type="button" class="ToggleFilterBtn">▼</button>
+           </div>
+          
+           <div class="FilterOptions collapsed">
           <label><input type="checkbox" name="category" value="development"> Development</label>
           <label><input type="checkbox" name="category" value="design"> Design</label>
           <label><input type="checkbox" name="category" value="business"> Business</label>
@@ -58,39 +65,64 @@
           <label><input type="checkbox" name="category" value="it-software"> IT & Software</label>
           <label><input type="checkbox" name="category" value="personal-development"> Personal Development</label>
           <label><input type="checkbox" name="category" value="health-fitness"> Health & Fitness</label>
+           </div>
         </div>
 
         <div class="FilterGroup">
-          <h4>Level</h4>
+
+          <div class="FilterHeader">
+            <h4>Level</h4>
+            <button type="button" class="ToggleFilterBtn">▼</button>
+          </div>
+
+          <div class="FilterOptions collapsed">
           <label><input type="checkbox" name="level" value="beginner"> Beginner</label>
           <label><input type="checkbox" name="level" value="intermediate"> Intermediate</label>
           <label><input type="checkbox" name="level" value="advanced"> Advanced</label>
           <label><input type="checkbox" name="level" value="expert"> Expert</label>
+          </div>
         </div>
 
         <div class="FilterGroup">
-          <h4>Educator</h4>
+          <div class="FilterHeader">
+            <h4>Educator</h4>
+            <button type="button" class="ToggleFilterBtn">▼</button>
+          </div>
+          <div class="FilterOptions collapsed">
           <label><input type="checkbox" name="educator" value="google"> Google</label>
           <label><input type="checkbox" name="educator" value="meta"> Meta</label>
           <label><input type="checkbox" name="educator" value="microsoft"> Microsoft</label>
           <label><input type="checkbox" name="educator" value="ibm"> IBM</label>
           <label><input type="checkbox" name="educator" value="harvard university"> Harvard University</label>
+          </div>
         </div>
 
         <div class="FilterGroup">
-          <h4>Learning Type</h4>
+          <div class="FilterHeader">
+            <h4>Learning Type</h4>
+            <button type="button" class="ToggleFilterBtn">▼</button>
+          </div>
+
+          <div class="FilterOptions collapsed">
           <label><input type="checkbox" name="learningType" value="course"> Course</label>
           <label><input type="checkbox" name="learningType" value="professional_certificate"> Professional Certificate</label>
           <label><input type="checkbox" name="learningType" value="micro_masters"> MicroMasters</label>
           <label><input type="checkbox" name="learningType" value="specialization"> Specialization</label>
+          </div>
         </div>
 
         <div class="FilterGroup">
-          <h4>Language</h4>
+          <div class="FilterHeader">
+            <h4>Language</h4>
+            <button type="button" class="ToggleFilterBtn">▼</button>
+          </div>
+
+          <div class="FilterOptions collapsed">
           <label><input type="checkbox" name="language" value="english"> English</label>
           <label><input type="checkbox" name="language" value="arabic"> Arabic</label>
           <label><input type="checkbox" name="language" value="french"> French</label>
           <label><input type="checkbox" name="language" value="spanish"> Spanish</label>
+          </div>
         </div>
       </div>
 
@@ -103,9 +135,14 @@
         <button id="ResetFilters" class="Btn ResetBtn" >Reset Filters</button>
     </div>
   </div>
+    </aside>
 
+    <section class="CoursesContent">
     <div id="CoursesSummary" class="SummaryGrid"></div>
     <div id="CoursesGrid" class="CourseCardContainer"></div>
+    </section>
+
+</section>
   </main>
 
   <footer class="Footer">
