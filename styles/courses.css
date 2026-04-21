@@ -20,6 +20,7 @@
 .CoursesHero {
   margin-top: 0;
   margin-bottom: 24px;
+  width: 100%;
   padding: 28px;
   min-height: 600px;
   background-image: url(../img/courses_hero.png);
@@ -27,12 +28,18 @@
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 0 8px lightgrey;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 60px 6%;
 }
 
 .CoursesHero h1 {
-  font-size: 42px;
+  font-size: 350%;
   margin-bottom: 10px;
-  color: var(--primary-dark);
 }
 
 .CoursesLayout {
@@ -57,11 +64,7 @@
 .CoursesIntro {
   color: var(--muted);
   max-width: 760px;
-}
-
-.CoursesIntro {
-  color: var(--muted);
-  max-width: 760px;
+  font-size: 200%;
 }
 
 .TopControls {
