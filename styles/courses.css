@@ -4,7 +4,7 @@
   margin-bottom: 20px;
   background: var(--surface);
   border-radius: 10px;
-  box-shadow: 0 0 8px grey;
+  box-shadow: 0 0 8px lightgrey;
   padding: 18px;
 }
 
@@ -16,16 +16,17 @@
 
 }
 
-.FavoriteCard {
-  border: 2px solid var(--primary);
-}
 
 .CoursesHero {
+  margin-top: 0;
   margin-bottom: 24px;
   padding: 28px;
-  
-  border-radius: 14px;
-  box-shadow: 0 0 8px grey;
+  min-height: 600px;
+  background-image: url(../img/courses_hero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 8px lightgrey;
 }
 
 .CoursesHero h1 {
