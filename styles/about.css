@@ -55,14 +55,51 @@
 
 .AboutGrid {
   display: grid;
+  grid-template-columns: 1fr; 
   gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-@media (min-width: 768px) {
-  .AboutGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.TeamGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
+
+.TeamMember {
+  flex: 1;
+  min-width: 180px;
+  max-width: 220px;
+  text-align: center;
+}
+
+.TeamMember:hover {
+  transform: translateY(-4px);
+}
+
+.TeamMember img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 4px solid #eee;
+}
+
+.TeamMember h3 {
+  margin: 8px 0 4px;
+  font-size: 18px;
+}
+
+.TeamMember p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
 
 .List {
   list-style: none;
@@ -88,7 +125,14 @@
   text-decoration: none;
 }
 .Card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 40px; 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   transition: 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .Card:hover {
@@ -99,9 +143,12 @@
   margin-bottom: 10px;
 }
 
+
+
 .CardText {
   line-height: 1.6;
   color: #444;
+}
 
 
   .Hero {
@@ -119,7 +166,7 @@
   .HeroActions {
     left: 17%;
   }
-}
+
 
 
 @media (max-width: 768px) {
