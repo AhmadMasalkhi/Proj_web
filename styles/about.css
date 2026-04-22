@@ -1,8 +1,47 @@
-.AboutHero {
-  text-align: center;
-  margin-bottom: 40px;
+.PageSection{
+  margin: 0;
+  padding: 0;
 }
 
+
+
+.Hero {
+
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 6%;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+
+}
+
+.Hero h1 {
+  font-size: 350%;
+  text-align: center;
+  position: relative;
+  left: 7%;
+}
+
+.Hero p {
+  font-size: 200%;
+}
+
+.HeroActions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  left: 11.5%;
+}
 .AboutHero h1 {
   font-size: 32px;
   margin-bottom: 10px;
@@ -63,4 +102,38 @@
 .CardText {
   line-height: 1.6;
   color: #444;
+
+
+  .Hero {
+    padding: 50px 8%;
+  }
+
+  .Hero h1 {
+        padding: 0 6%;
+    font-size: 270%;
+  }
+
+  .Hero p {
+    font-size: 170%;
+  }
+  .HeroActions {
+    left: 17%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Hero h1 {
+    font-size: 200%;
+    padding: 0 10%;
+  }
+
+  .Hero p {
+    font-size: 150%;
+  }
+  .HeroActions {
+    flex-direction: column;
+    left: 26%;
+  }
+
 }

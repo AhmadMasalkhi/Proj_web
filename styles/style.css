@@ -121,10 +121,11 @@ h4 {
 }
 
 .PageSection {
-  padding: 0.5% 3%;
+  padding: 0% 3%;
 }
 .Headerr{
   text-align: center;
+  padding-bottom: 40px;
 }
 .CategoryRow{
   display: flex;
