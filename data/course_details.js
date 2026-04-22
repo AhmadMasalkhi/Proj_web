@@ -331,3 +331,58 @@ function renderModule2() {
 
   attachAccordionEvents();
 }
+
+function markModule1Watched() {
+  module1Watched = true;
+  localStorage.setItem(module1WatchedKey, JSON.stringify(true));
+  updateModule2State();
+  renderModule1();
+}
+
+function attachAccordionEvents() {
+  let accordionHeaders = document.querySelectorAll(".AccordionHeader");
+
+  for (let i = 0; i < accordionHeaders.length; i++) {
+    accordionHeaders[i].addEventListener("click", function () {
+      let accordionItem = this.closest(".AccordionItem");
+      let accordionContent = accordionItem.querySelector(".AccordionContent");
+      let arrow = accordionItem.querySelector(".AccordionArrow");
+
+      if (accordionContent.classList.contains("OpenAccordion")) {
+        accordionContent.classList.remove("OpenAccordion");
+        arrow.textContent = "▼";
+      }
+      else {
+        accordionContent.classList.add("OpenAccordion");
+        arrow.textContent = "▲";
+      }
+    });
+  }
+}
+
+function renderNotFound() {
+  detailsHero.style.backgroundImage = "none";
+  heroTitle.textContent = "Course Not Found";
+  heroSubtitle.textContent = "The course you are looking for does not exist or the link is not correct.";
+
+  let html = "";
+  html += "<div class='EmptyCourseState'>";
+  html += "<h2>Course Not Found</h2>";
+  html += "<p>We could not find the requested course details.</p>";
+  html += "<a href='courses.html' class='Btn Btn1'>Back to Courses</a>";
+  html += "</div>";
+
+  detailsContent.innerHTML = html;
+}
+
+getSelectedCourse();
+
+if (selectedCourse == null) {
+  renderNotFound();
+}
+else {
+  renderHero();
+  updateModule2State();
+  renderInfo();
+  sidebarMenu.addEventListener("click", handleSidebarClick);
+}
