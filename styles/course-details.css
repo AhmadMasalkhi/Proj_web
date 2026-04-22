@@ -97,7 +97,7 @@
 }
 
 .InfoCard {
-  background: #f8fcf9;
+  background: white;
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
@@ -125,7 +125,7 @@
 }
 
 .ListItem {
-  background: #f8fcf9;
+  background:white;
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
@@ -137,7 +137,7 @@
 }
 
 .ModuleCard {
-  background: #f8fcf9;
+  background: white;
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
