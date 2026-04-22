@@ -1,0 +1,212 @@
+.DetailsHero {
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.DetailsHero h1 {
+  font-size: 42px;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+.DetailsHero p {
+  font-size: 18px;
+  color: var(--primary-dark);
+}
+
+.HeroSubtitle {
+  max-width: 700px;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.DetailsLayout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  padding: 24px 40px 40px;
+  align-items: start;
+}
+
+.SidebarCourseMini {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.SidebarCourseMini img {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.SidebarCourseMini h3 {
+  font-size: 18px;
+  color: var(--primary-dark);
+  margin-bottom: 6px;
+}
+
+.SidebarCourseMini p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.SidebarMenu {
+  display: grid;
+  gap: 10px;
+}
+
+.SidebarItem {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.DetailsContent {
+  padding: 24px;
+  min-height: 600px;
+}
+
+.ContentSectionTitle {
+  color: var(--primary-dark);
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.InfoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.InfoCard {
+  background: #f8fcf9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.InfoCard h4 {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.InfoCard p {
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.ContentParagraph {
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.ListBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.ListItem {
+  background: #f8fcf9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.ListItem h4 {
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.ModuleCard {
+  background: #f8fcf9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.ModuleCard h3 {
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.ModuleMeta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.ModuleMeta span {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.EmptyCourseState {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.EmptyCourseState h2 {
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.EmptyCourseState p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .DetailsLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .DetailsSidebar {
+    position: static;
+  }
+
+  .InfoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .DetailsHero h1 {
+    font-size: 32px;
+  }
+
+  .HeroSubtitle {
+    font-size: 16px;
+  }
+
+  .DetailsHeroOverlay {
+    padding: 32px 20px;
+  }
+
+  .DetailsContent {
+    padding: 18px;
+  }
+}

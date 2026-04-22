@@ -24,6 +24,31 @@
       <button id="MenuToggle" class="Hidden">Menu</button>
     </div>
   </header>
+<main>
+    <section class="DetailsLayout">
+      <aside class="DetailsSidebar Card">
+        <div class="SidebarCourseMini">
+          <img id="SidebarCourseImage" src="" alt="Course image">
+          <div>
+            <h3 id="SidebarCourseTitle">Course Title</h3>
+            <p id="SidebarCourseInstructor">Instructor</p>
+          </div>
+        </div>
+
+        <div id="SidebarMenu" class="SidebarMenu">
+          <button class="SidebarItem active" data-section="info">Info</button>
+          <button class="SidebarItem" data-section="materials">Course Materials</button>
+          <button class="SidebarItem" data-section="module-1">Module 1</button>
+          <button class="SidebarItem" data-section="module-2">Module 2</button>
+          <button class="SidebarItem" data-section="notes">Notes</button>
+        </div>
+      </aside>
+
+      <section class="DetailsContent Card">
+        <div id="DetailsContent"></div>
+      </section>
+    </section>
+  </main>
 
 
 
@@ -49,7 +74,8 @@
 
       <p class="FooterCopy">© 2026 EduHub. All rights reserved.</p>
   </footer>
-
+  <script src="../data/main.js"></script>
+  <script src="../data/course_details.js"></script>
 
 </body>
 </html>
