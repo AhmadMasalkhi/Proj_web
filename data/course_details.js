@@ -158,3 +158,94 @@ let courseId = params.get("id");
 let selectedCourse = null;
 let module1WatchedKey = "module1Watched_" + courseId;
 let module1Watched = JSON.parse(localStorage.getItem(module1WatchedKey)) || false;
+
+
+function formatText(text) {
+  return text
+    .replaceAll("-", " ")
+    .replaceAll("_", " ")
+    .replace(/\b\w/g, function (char) {
+      return char.toUpperCase();
+    });
+}
+
+function getSelectedCourse() {
+  for (let i = 0; i < courses.length; i++) {
+    if (courses[i].id === courseId) {
+      selectedCourse = courses[i];
+      break;
+    }
+  }
+}
+
+function renderHero() {
+  heroTitle.textContent = selectedCourse.title;
+  heroSubtitle.textContent = selectedCourse.subtitle;
+  detailsHero.style.backgroundImage = 'url("' + selectedCourse.image + '")';
+
+  sidebarCourseImage.src = selectedCourse.image;
+  sidebarCourseImage.alt = selectedCourse.title;
+  sidebarCourseTitle.textContent = selectedCourse.title;
+  sidebarCourseInstructor.textContent = selectedCourse.instructor;
+}
+
+function updateModule2State() {
+  let module2Button = document.querySelector('.SidebarItem[data-section="module-2"]');
+
+  if (!module2Button) {
+    return;
+  }
+
+  if (module1Watched) {
+    module2Button.disabled = false;
+    module2Button.classList.remove("LockedItem");
+    module2Button.textContent = "Module 2";
+  } else {
+    module2Button.disabled = true;
+    module2Button.classList.add("LockedItem");
+    module2Button.textContent = "Module 2 (Locked)";
+  }
+}
+
+function renderInfo() {
+  let html = `
+    <h2 class="ContentSectionTitle">Course Info</h2>
+
+    <div class="InfoGrid">
+      <div class="InfoCard">
+        <h4>Instructor</h4>
+        <p>${selectedCourse.instructor}</p>
+      </div>
+
+      <div class="InfoCard">
+        <h4>Category</h4>
+        <p>${formatText(selectedCourse.category)}</p>
+      </div>
+
+      <div class="InfoCard">
+        <h4>Level</h4>
+        <p>${formatText(selectedCourse.level)}</p>
+      </div>
+
+      <div class="InfoCard">
+        <h4>Language</h4>
+        <p>${formatText(selectedCourse.language)}</p>
+      </div>
+
+      <div class="InfoCard">
+        <h4>Learning Type</h4>
+        <p>${formatText(selectedCourse.learningType)}</p>
+      </div>
+
+      <div class="InfoCard">
+        <h4>Price</h4>
+        <p>$${parseFloat(selectedCourse.price).toFixed(2)}</p>
+      </div>
+    </div>
+
+    <p class="ContentParagraph">${selectedCourse.infoParagraph1}</p>
+    <p class="ContentParagraph">${selectedCourse.infoParagraph2}</p>
+  `;
+
+  detailsContent.innerHTML = html;
+}
