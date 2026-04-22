@@ -249,3 +249,85 @@ function renderInfo() {
 
   detailsContent.innerHTML = html;
 }
+
+function renderMaterials() {
+  let html = "<h2 class='ContentSectionTitle'>Course Materials</h2>";
+  html += "<div class='ListBlock'>";
+
+  for (let i = 0; i < selectedCourse.materials.length; i++) {
+    html += "<div class='ListItem'>";
+    html += "<h4>Material " + (i + 1) + "</h4>";
+    html += "<p>" + selectedCourse.materials[i] + "</p>";
+    html += "</div>";
+  }
+
+  html += "</div>";
+
+  detailsContent.innerHTML = html;
+}
+
+function renderModule1() {
+  let watchedButtonText = "Mark as Watched";
+
+  if (module1Watched == true) {
+    watchedButtonText = "Watched";
+  }
+
+  let html = "";
+  html += "<h2 class='ContentSectionTitle'>" + selectedCourse.module1.title + "</h2>";
+  html += "<div class='ModuleCard'>";
+  html += "<h3>" + selectedCourse.module1.videoTitle + "</h3>";
+  html += "<div class='VideoWrapper'>";
+  html += "<iframe ";
+  html += "src='" + selectedCourse.module1.videoUrl + "' ";
+  html += "title='" + selectedCourse.module1.videoTitle + "' ";
+  html += "frameborder='0' ";
+  html += "allowfullscreen>";
+  html += "</iframe>";
+  html += "</div>";
+  html += "<div class='ModuleActionRow'>";
+  html += "<p class='ContentParagraph ModuleVideoText'>" + selectedCourse.module1.description + "</p>";
+  html += "<button id='WatchedBtn' class='Btn Btn1' type='button'>" + watchedButtonText + "</button>";
+  html += "</div>";
+  html += "</div>";
+
+  detailsContent.innerHTML = html;
+
+  let watchedBtn = document.getElementById("WatchedBtn");
+
+  if (watchedBtn != null) {
+    watchedBtn.addEventListener("click", markModule1Watched);
+  }
+}
+
+function renderModule2() {
+  if (module1Watched == false) {
+    detailsContent.innerHTML =
+      "<div class='ModuleCard'>" +
+      "<h2 class='ContentSectionTitle'>Module 2</h2>" +
+      "<p class='ContentParagraph'>Module 2 is locked. Please watch Module 1 first, then press the watched button to unlock this section.</p>" +
+      "</div>";
+    return;
+  }
+
+  let html = "<h2 class='ContentSectionTitle'>" + selectedCourse.module2.title + "</h2>";
+  html += "<div class='AccordionBlock'>";
+
+  for (let i = 0; i < selectedCourse.module2.sections.length; i++) {
+    html += "<div class='AccordionItem'>";
+    html += "<button class='AccordionHeader' type='button' data-index='" + i + "'>";
+    html += "<span>" + selectedCourse.module2.sections[i].title + "</span>";
+    html += "<span class='AccordionArrow'>▼</span>";
+    html += "</button>";
+    html += "<div class='AccordionContent'>";
+    html += "<p>" + selectedCourse.module2.sections[i].content + "</p>";
+    html += "</div>";
+    html += "</div>";
+  }
+
+  html += "</div>";
+
+  detailsContent.innerHTML = html;
+
+  attachAccordionEvents();
+}
