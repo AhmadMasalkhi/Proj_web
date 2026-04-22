@@ -178,3 +178,35 @@
   color: var(--muted);
   margin-bottom: 16px;
 }
+
+@media (max-width: 900px) {
+  .DetailsLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .DetailsSidebar {
+    position: static;
+  }
+
+  .InfoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .DetailsHero h1 {
+    font-size: 32px;
+  }
+
+  .HeroSubtitle {
+    font-size: 16px;
+  }
+
+  .DetailsHeroOverlay {
+    padding: 32px 20px;
+  }
+
+  .DetailsContent {
+    padding: 18px;
+  }
+}
