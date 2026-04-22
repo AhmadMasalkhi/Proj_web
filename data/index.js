@@ -37,7 +37,7 @@ function createCourseCard2(course) {
 
 if (FeaturedCourses) {
     courses.forEach(course => {
-        if(parseFloat(course.rating) >= 4.7){
+        if(parseFloat(course.rating) >= 4.8){
             FeaturedCourses.innerHTML += createCourseCard2(course);
         }
     });
