@@ -374,6 +374,61 @@ function renderNotFound() {
 
   detailsContent.innerHTML = html;
 }
+function renderNotes() {
+  let html = "";
+  html += "<h2 class='ContentSectionTitle'>Notes</h2>";
+  html += "<div class='ModuleCard'>";
+  html += "<p class='ContentParagraph'>" + selectedCourse.notes + "</p>";
+  html += "</div>";
+
+  detailsContent.innerHTML = html;
+}
+
+function renderSection(section) {
+  if (section == "info") {
+    renderInfo();
+  }
+  else if (section == "materials") {
+    renderMaterials();
+  }
+  else if (section == "module-1") {
+    renderModule1();
+  }
+  else if (section == "module-2") {
+    renderModule2();
+  }
+  else if (section == "notes") {
+    renderNotes();
+  }
+}
+
+function setActiveSidebarItem(section) {
+  let allItems = document.querySelectorAll(".SidebarItem");
+
+  for (let i = 0; i < allItems.length; i++) {
+    allItems[i].classList.remove("active");
+
+    if (allItems[i].dataset.section == section) {
+      allItems[i].classList.add("active");
+    }
+  }
+}
+
+function handleSidebarClick(event) {
+  let clickedItem = event.target.closest(".SidebarItem");
+
+  if (!clickedItem) {
+    return;
+  }
+
+  if (clickedItem.disabled) {
+    return;
+  }
+
+  let section = clickedItem.dataset.section;
+  setActiveSidebarItem(section);
+  renderSection(section);
+}
 
 getSelectedCourse();
 

@@ -179,6 +179,72 @@
   margin-bottom: 16px;
 }
 
+.LockedItem {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.VideoWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 16px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.VideoWrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.ModuleActionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ModuleVideoText {
+  flex: 1;
+  min-width: 240px;
+}
+
+.AccordionBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.AccordionItem {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f8fcf9;
+}
+
+.AccordionHeader {
+  width: 100%;
+  border: none;
+  background: white;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.AccordionContent {
+  display: none;
+  padding: 16px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.AccordionContent.OpenAccordion {
+  display: block;
+}
+
 @media (max-width: 900px) {
   .DetailsLayout {
     grid-template-columns: 1fr;
