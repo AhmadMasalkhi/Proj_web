@@ -181,7 +181,6 @@ function getSelectedCourse() {
 function renderHero() {
   heroTitle.textContent = selectedCourse.title;
   heroSubtitle.textContent = selectedCourse.subtitle;
-  detailsHero.style.backgroundImage = 'url("' + selectedCourse.image + '")';
 
   sidebarCourseImage.src = selectedCourse.image;
   sidebarCourseImage.alt = selectedCourse.title;
@@ -250,21 +249,6 @@ function renderInfo() {
   detailsContent.innerHTML = html;
 }
 
-function renderMaterials() {
-  let html = "<h2 class='ContentSectionTitle'>Course Materials</h2>";
-  html += "<div class='ListBlock'>";
-
-  for (let i = 0; i < selectedCourse.materials.length; i++) {
-    html += "<div class='ListItem'>";
-    html += "<h4>Material " + (i + 1) + "</h4>";
-    html += "<p>" + selectedCourse.materials[i] + "</p>";
-    html += "</div>";
-  }
-
-  html += "</div>";
-
-  detailsContent.innerHTML = html;
-}
 
 function renderModule1() {
   let watchedButtonText = "Mark as Watched";
@@ -387,9 +371,6 @@ function renderNotes() {
 function renderSection(section) {
   if (section == "info") {
     renderInfo();
-  }
-  else if (section == "materials") {
-    renderMaterials();
   }
   else if (section == "module-1") {
     renderModule1();
