@@ -10,6 +10,7 @@
   background-image: url("../img/hero.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 60px 6%;
   text-align: center;
   width: 100%;
@@ -32,15 +33,6 @@
 
 .Hero p {
   font-size: 200%;
-}
-
-.HeroActions {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-  position: relative;
-  left: 11.5%;
 }
 .AboutHero h1 {
   font-size: 32px;

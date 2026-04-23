@@ -10,36 +10,46 @@
 
 .CourseCardContainer {
   display: grid;
-  grid-template-columns: repeat(4, 360px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   justify-content: start;
-
 }
 
+.PageSection {
+  margin: 0;
+  padding: 0;
+}
+.CourseCardContainer > * {
+  min-width: 0;
+}
+.Hero {
 
-.CoursesHero {
-  margin-top: 0;
-  margin-bottom: 24px;
-  width: 100%;
-  padding: 28px;
-  min-height: 600px;
   background-image: url(../img/courses_hero.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 0 8px lightgrey;
-
+  padding: 60px 6%;
+  text-align: center;
+  width: 100%;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 60px 6%;
+  gap: 10px;
 }
 
-.CoursesHero h1 {
+.Hero h1 {
   font-size: 350%;
-  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+  left: 1.5%;
+
+}
+
+.Hero p {
+  font-size: 200%;
 }
 
 .CoursesLayout {
@@ -174,7 +184,7 @@
 
 @media (max-width: 1500px) {
   .CourseCardContainer {
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -184,25 +194,38 @@
   }
 
   .CourseCardContainer {
-    grid-template-columns: repeat(2, 360px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 
 @media (max-width: 768px) {
   .TopControls {
     grid-template-columns: 1fr;
   }
+
   .CoursesLayout {
     grid-template-columns: 1fr;
   }
 
-    .FiltersSidebar {
+  .FiltersSidebar {
     position: static;
   }
 
   .CourseCardContainer {
     grid-template-columns: 1fr;
     justify-content: stretch;
+  }
+
+  .Hero {
+    min-height: 40vh;
+    padding: 40px 5%;
+  }
+
+  .Hero h1 {
+    font-size: 200%;
+  }
+
+  .Hero p {
+    font-size: 140%;
   }
 }
