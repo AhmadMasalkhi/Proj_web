@@ -1,6 +1,6 @@
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-const menuToggle = document.getElementById("MenuToggle");
-const navLinks = document.getElementById("NavLinks");
+let menuToggle = document.getElementById("MenuToggle");
+let navLinks = document.getElementById("NavLinks");
 function setupMenuToggle() {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("Visible");
@@ -8,7 +8,7 @@ function setupMenuToggle() {
 }
 
 function setupAuthStatus() {
-  const loginLink = document.getElementById("Login");
+  let loginLink = document.getElementById("Login");
 
   if (currentUser) {
     loginLink.textContent = "Logout";
@@ -28,7 +28,7 @@ function setupAuthStatus() {
 
 
 function protectProfileLink() {
-  const profileLink = document.getElementById("ProfileLink");
+  let profileLink = document.getElementById("ProfileLink");
   if (!currentUser) {
     profileLink.classList.add("Hidden");
 }
