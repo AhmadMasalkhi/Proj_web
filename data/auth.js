@@ -6,18 +6,7 @@ const signupForm = document.getElementById("SignupForm");
 
 const message = document.getElementById("AuthMessage");
 
-const loginBtn = document.getElementById("Login");
-const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-if (loginBtn && currentUser) {
-  loginBtn.textContent = "Logout";
-
-  loginBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
-  });
-}
 
 
 if (showLogin && showSignup) {
@@ -25,8 +14,8 @@ if (showLogin && showSignup) {
     loginForm.classList.remove("Hidden");
     signupForm.classList.add("Hidden");
 
-    showLogin.classList.add("Btn1");
-    showLogin.classList.remove("Btn2", "active");
+    showLogin.classList.add("Btn1", "active");
+    showLogin.classList.remove("Btn2");
 
     showSignup.classList.add("Btn2");
     showSignup.classList.remove("Btn1", "active");
@@ -38,8 +27,8 @@ if (showLogin && showSignup) {
     signupForm.classList.remove("Hidden");
     loginForm.classList.add("Hidden");
 
-    showSignup.classList.add("Btn1");
-    showSignup.classList.remove("Btn2", "active");
+    showSignup.classList.add("Btn1", "active");
+    showSignup.classList.remove("Btn2");
 
     showLogin.classList.add("Btn2");
     showLogin.classList.remove("Btn1", "active");
@@ -54,7 +43,7 @@ if (signupForm) {
     e.preventDefault();
 
     const name = document.getElementById("SignupName").value.trim();
-    const email = document.getElementById("SignupEmail").value.trim();
+    const email = document.getElementById("SignupEmail").value.trim().toLowerCase();
     const password = document.getElementById("SignupPassword").value;
     const confirmPassword = document.getElementById("SignupConfirmPassword").value;
     const role = document.getElementById("SignupRole").value;
@@ -88,7 +77,7 @@ if (loginForm) {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("LoginEmail").value.trim();
+    const email = document.getElementById("LoginEmail").value.trim().toLowerCase();
     const password = document.getElementById("LoginPassword").value;
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -112,7 +101,7 @@ if (loginForm) {
       if (user.role === "student") {
         window.location.href = "student-dashboard.html";
       } else {
-        window.location.href = "instructor-dashboard.html";
+        window.location.href = "profile.html";
       }
     }, 800);
   });
