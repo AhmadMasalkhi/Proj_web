@@ -37,7 +37,6 @@ function protectProfileLink() {
 setupMenuToggle();
 protectProfileLink();
 setupAuthStatus();
-highlightActiveNavLink();
 
 
 
