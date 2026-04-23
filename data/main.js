@@ -1,7 +1,6 @@
 const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 const menuToggle = document.getElementById("MenuToggle");
 const navLinks = document.getElementById("NavLinks");
-
 function setupMenuToggle() {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("Visible");
@@ -27,7 +26,16 @@ function setupAuthStatus() {
   }
 }
 
+
+function protectProfileLink() {
+  const profileLink = document.getElementById("ProfileLink");
+  if (!currentUser) {
+    profileLink.classList.add("Hidden");
+}
+}
+
 setupMenuToggle();
+protectProfileLink();
 setupAuthStatus();
 highlightActiveNavLink();
 
