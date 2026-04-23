@@ -15,10 +15,7 @@
   justify-content: start;
 }
 
-.PageSection {
-  margin: 0;
-  padding: 0;
-}
+
 .CourseCardContainer > * {
   min-width: 0;
 }
@@ -27,7 +24,7 @@
   background-image: url(../img/courses_hero.png);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  
   padding: 60px 6%;
   text-align: center;
   width: 100%;
