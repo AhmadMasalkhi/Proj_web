@@ -65,10 +65,23 @@ if (signupForm) {
     users.push({ name, email, password, role });
     localStorage.setItem("users", JSON.stringify(users));
 
-    message.textContent = "Account created successfully!";
+    
+    var newUser = { name, email, password, role };
+    localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+    message.textContent = "Account created successfully! Redirecting...";
     message.style.color = "green";
 
     signupForm.reset();
+
+    
+    setTimeout(() => {
+      if (role === "student") {
+        window.location.href = "student-dashboard.html";
+      } else {
+        window.location.href = "profile.html";
+      }
+    }, 800);
   });
 }
 
