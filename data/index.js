@@ -1,11 +1,17 @@
 let FeaturedCourses = document.getElementById("CoursesGrid");
 
+
+function getImagePath(imagePath) {
+
+  return imagePath.replace('../', '');
+}
+
 function createCourseCard2(course) {
      let cardClass = "Card CourseCard";
   return `
     <div class="${cardClass}">
       <div class="CourseImageWrap">
-        <img src="${course.image}" alt="${course.title}">
+        <img src="${getImagePath(course.image)}" alt="${course.title}">
         <span class="CourseBadge">${formatText(course.level)}</span>
       </div>
 
@@ -27,7 +33,7 @@ function createCourseCard2(course) {
           <p class="CoursePrice">$${parseFloat(course.price).toFixed(2)}</p>
 
           <div class="CourseActions">
-            <a href="course-details.html?id=${course.id}" class="Btn CourseBtn">View Details</a>
+            <a href="pages/course-details.html?id=${course.id}" class="Btn CourseBtn">View Details</a>
           </div>
         </div>
       </div>
