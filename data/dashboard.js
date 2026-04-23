@@ -44,7 +44,6 @@ function showEnrolledCourses() {
   }
 
   container.innerHTML = courses.map(course => {
-    // Generate random progress for enrolled courses (10-90%)
     const progress = course.progress || Math.floor(Math.random() * 81) + 10;
     
     return `
