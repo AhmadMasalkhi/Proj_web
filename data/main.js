@@ -17,12 +17,12 @@ function setupAuthStatus() {
     loginLink.onclick = function (event) {
       event.preventDefault();
       localStorage.removeItem("currentUser");
-      window.location.href = "index.html";
+      window.location.href = window.location.pathname.includes("pages/") ? "../index.html" : "index.html";
     };
 
   } else {
     loginLink.textContent = "Login";
-    loginLink.href = "auth.html";
+    loginLink.href = window.location.pathname.includes("pages/") ? "auth.html" : "pages/auth.html";
   }
 }
 
