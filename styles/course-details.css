@@ -252,57 +252,7 @@
   display: block;
 }
 
-/* trying something...................................... */
-.NotesForm {
-  display: grid;
-  gap: 14px;
-  margin-bottom: 24px;
-}
 
-.NotesTextarea {
-  width: 100%;
-  min-height: 140px;
-  resize: vertical;
-  padding: 14px 16px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  font-size: 15px;
-  color: var(--text);
-  background: white;
-  outline: none;
-}
-
-.NotesTextarea:focus {
-  border-color: var(--primary);
-}
-
-.NotesList {
-  display: grid;
-  gap: 14px;
-}
-
-.NoteCard {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.NoteCard p {
-  color: var(--text);
-  line-height: 1.7;
-  margin: 0 0 10px;
-}
-
-.NoteMeta {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.EmptyNotesText {
-  color: var(--muted);
-  margin: 0;
-}
 
 @media (max-width: 900px) {
   .DetailsLayout {
