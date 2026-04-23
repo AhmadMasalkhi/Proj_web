@@ -137,6 +137,282 @@ var jsonData = `
       ]
     },
     "notes": "This course is best for learners who already know the basics of online platforms and want to understand digital marketing more deeply."
+  },
+  {
+    "id": "4",
+    "title": "Business Analytics for Beginners",
+    "subtitle": "Learn how to turn data into strong business decisions with practical analytics tools.",
+    "instructor": "Harvard University",
+    "category": "business",
+    "level": "beginner",
+    "price": "69.99",
+    "rating": "4.9",
+    "language": "english",
+    "learningType": "professional_certificate",
+    "image": "../img/business.jpg",
+    "description": "Use data and reporting tools to support business decisions and performance tracking.",
+    "infoParagraph1": "This course explains how analytics helps companies measure results, monitor trends, and use insights to solve business challenges.",
+    "infoParagraph2": "Learners practice reading reports, using dashboards, and applying simple analytical methods to understand performance and growth opportunities.",
+    "materials": [
+      "Analytics workbook",
+      "Dashboard templates",
+      "Case study examples",
+      "Reporting guide"
+    ],
+    "module1": {
+      "title": "Module 1",
+      "videoTitle": "Introduction to Business Analytics",
+      "videoUrl": "https://www.youtube.com/embed/8kUo_ROF4DA",
+      "description": "This module shows how analytics supports business planning and introduces the most important metrics used in reporting."
+    },
+    "module2": {
+      "title": "Module 2",
+      "sections": [
+        {
+          "title": "Data Visualization Basics",
+          "content": "This section covers charts, dashboards, and visual design principles that help teams interpret information quickly."
+        },
+        {
+          "title": "Metrics and KPIs",
+          "content": "This section explains how to define key performance indicators and choose the best metrics for different business goals."
+        },
+        {
+          "title": "Data-Driven Decision Making",
+          "content": "This section focuses on using analytical evidence to support recommendations and improve business outcomes."
+        }
+      ]
+    },
+    "notes": "Ideal for learners who want to use business data more confidently and grow their analytical thinking."
+  },
+  {
+    "id": "5",
+    "title": "Cybersecurity Basics",
+    "subtitle": "Protect systems, identify threats, and learn the fundamentals of digital security.",
+    "instructor": "Microsoft",
+    "category": "it-software",
+    "level": "intermediate",
+    "price": "54.99",
+    "rating": "4.7",
+    "language": "english",
+    "learningType": "course",
+    "image": "../img/cyber.jfif",
+    "description": "Explore system safety, authentication, online threats, and secure digital practices.",
+    "infoParagraph1": "This course introduces common cybersecurity threats and the measures used to protect networks, devices, and online accounts.",
+    "infoParagraph2": "Students will learn practical security habits and the basic tools organizations use to reduce risk in digital environments.",
+    "materials": [
+      "Security checklist",
+      "Threat intelligence notes",
+      "Incident response template",
+      "Lab exercises"
+    ],
+    "module1": {
+      "title": "Module 1",
+      "videoTitle": "Introduction to Cybersecurity",
+      "videoUrl": "https://www.youtube.com/embed/O1S4p4e7A0c",
+      "description": "This module explains why cybersecurity matters, the types of attackers, and the key defenses modern teams rely on."
+    },
+    "module2": {
+      "title": "Module 2",
+      "sections": [
+        {
+          "title": "Threat Landscapes",
+          "content": "This section describes malware, phishing, social engineering, and the common tactics used by cybercriminals."
+        },
+        {
+          "title": "Secure Authentication",
+          "content": "This section covers passwords, multi-factor authentication, and best practices to keep accounts safe."
+        },
+        {
+          "title": "Network Protection",
+          "content": "This section focuses on firewalls, secure connections, and basic policies for keeping networks protected."
+        }
+      ]
+    },
+    "notes": "This course is great for learners who want a practical introduction to cybersecurity concepts and safe online behavior."
+  },
+  {
+    "id": "6",
+    "title": "Personal Productivity Mastery",
+    "subtitle": "Build daily routines and habits that help you stay focused, organized, and productive.",
+    "instructor": "Google",
+    "category": "personal-development",
+    "level": "beginner",
+    "price": "29.99",
+    "rating": "4.4",
+    "language": "arabic",
+    "learningType": "course",
+    "image": "../img/productive.jpg",
+    "description": "Improve planning, focus, daily routines, and practical productivity habits.",
+    "infoParagraph1": "This course walks learners through reliable productivity methods and techniques for managing time, focus, and tasks more effectively.",
+    "infoParagraph2": "It also shows how to build consistent habits, balance work and rest, and make steady progress toward personal goals.",
+    "materials": [
+      "Daily planner template",
+      "Habit tracker",
+      "Focus session guide",
+      "Weekly review checklist"
+    ],
+    "module1": {
+      "title": "Module 1",
+      "videoTitle": "Introduction to Productivity",
+      "videoUrl": "https://www.youtube.com/embed/1nDCaIotPXo",
+      "description": "This module introduces the foundations of productivity, including planning, prioritization, and how to get started with better routines."
+    },
+    "module2": {
+      "title": "Module 2",
+      "sections": [
+        {
+          "title": "Time Management",
+          "content": "This section explains practical techniques for organizing your day and keeping distractions under control."
+        },
+        {
+          "title": "Goal Setting",
+          "content": "This section covers how to set clear, achievable goals and break them into manageable steps."
+        },
+        {
+          "title": "Building Productive Routines",
+          "content": "This section helps learners create habits that support long-term focus and steady progress every day."
+        }
+      ]
+    },
+    "notes": "Perfect for learners who want to improve daily habits, planning skills, and overall personal productivity."
+  },
+  {
+    "id": "7",
+    "title": "Advanced JavaScript Concepts",
+    "subtitle": "Dive deeper into modern JavaScript, asynchronous code, and advanced programming patterns.",
+    "instructor": "Meta",
+    "category": "development",
+    "level": "advanced",
+    "price": "79.99",
+    "rating": "4.9",
+    "language": "english",
+    "learningType": "specialization",
+    "image": "../img/java.jpg",
+    "description": "Master advanced JavaScript topics like async code, modules, APIs, and closures.",
+    "infoParagraph1": "This course targets developers who already know the basics and want to build more modern, efficient JavaScript applications.",
+    "infoParagraph2": "Learners will explore practical patterns, advanced functions, and real browser APIs used in professional frontend development.",
+    "materials": [
+      "Code challenge exercises",
+      "ES module guide",
+      "Async programming notes",
+      "Design pattern examples"
+    ],
+    "module1": {
+      "title": "Module 1",
+      "videoTitle": "Advanced JavaScript Concepts",
+      "videoUrl": "https://www.youtube.com/embed/PoRJizFvM7s",
+      "description": "This module explains closures, advanced functions, modules, and the building blocks of sophisticated JavaScript code."
+    },
+    "module2": {
+      "title": "Module 2",
+      "sections": [
+        {
+          "title": "Async Programming",
+          "content": "This section covers promises, async/await, and how to manage asynchronous behavior in JavaScript."
+        },
+        {
+          "title": "Modern Browser APIs",
+          "content": "This section introduces APIs like fetch, local storage, and client-side routing for richer web experiences."
+        },
+        {
+          "title": "Design Patterns in JavaScript",
+          "content": "This section covers reusable coding patterns that help maintain clean and scalable JavaScript applications."
+        }
+      ]
+    },
+    "notes": "Great for developers who want to go beyond beginner JavaScript and write more powerful, maintainable code."
+  },
+  {
+    "id": "8",
+    "title": "Healthy Lifestyle and Fitness",
+    "subtitle": "Build stronger habits for exercise, nutrition, and mental balance.",
+    "instructor": "IBM",
+    "category": "health-fitness",
+    "level": "beginner",
+    "price": "24.99",
+    "rating": "4.3",
+    "language": "french",
+    "learningType": "course",
+    "image": "../img/health.jpg",
+    "description": "Build better wellness habits with simple lessons on exercise, health, and balance.",
+    "infoParagraph1": "This course introduces essential wellness strategies that are easy to follow and can fit into a busy schedule.",
+    "infoParagraph2": "Learners will focus on balanced nutrition, realistic fitness planning, and small habits that support long-term health.",
+    "materials": [
+      "Wellness planner",
+      "Nutrition basics guide",
+      "Workout templates",
+      "Progress tracking journal"
+    ],
+    "module1": {
+      "title": "Module 1",
+      "videoTitle": "Introduction to Healthy Living",
+      "videoUrl": "https://www.youtube.com/embed/e8ufJOnTWfA",
+      "description": "This module shows how balanced routines, good nutrition, and consistency contribute to lasting health."
+    },
+    "module2": {
+      "title": "Module 2",
+      "sections": [
+        {
+          "title": "Balanced Nutrition",
+          "content": "This section explains how to choose meals that give energy, support recovery, and maintain a healthy weight."
+        },
+        {
+          "title": "Exercise Planning",
+          "content": "This section covers beginner-friendly workouts and how to create a weekly fitness routine."
+        },
+        {
+          "title": "Mental Wellness Practices",
+          "content": "This section introduces breathing exercises, stress reduction techniques, and habits for better focus."
+        }
+      ]
+    },
+    "notes": "Best for learners who want a gentle, clear introduction to healthier daily habits and fitness basics."
+  },
+  {
+    "id": "9",
+    "title": "Cloud Computing Essentials",
+    "subtitle": "Learn how cloud services work and how to build reliable infrastructure in the cloud.",
+    "instructor": "Microsoft",
+    "category": "it-software",
+    "level": "advanced",
+    "price": "84.99",
+    "rating": "4.8",
+    "language": "english",
+    "learningType": "professional_certificate",
+    "image": "../img/cloud.jpg",
+    "description": "Understand cloud services, deployment models, and practical infrastructure concepts.",
+    "infoParagraph1": "This course explains the cloud computing foundations used by businesses to host applications and services at scale.",
+    "infoParagraph2": "Students will learn about cloud delivery models, service categories, and the tradeoffs involved in architecture decisions.",
+    "materials": [
+      "Cloud glossary",
+      "Architecture diagrams",
+      "Deployment checklist",
+      "Cost optimization guide"
+    ],
+    "module1": {
+      "title": "Module 1",
+      "videoTitle": "Introduction to Cloud Computing",
+      "videoUrl": "https://www.youtube.com/embed/8rNQp-cNq_s",
+      "description": "This module introduces core cloud concepts, service models, and the benefits of using cloud infrastructure."
+    },
+    "module2": {
+      "title": "Module 2",
+      "sections": [
+        {
+          "title": "Cloud Deployment Models",
+          "content": "This section covers public, private, and hybrid clouds, and when to choose each option."
+        },
+        {
+          "title": "Core Services Overview",
+          "content": "This section explains compute, storage, networking, and platform services in cloud environments."
+        },
+        {
+          "title": "Security and Cost Optimization",
+          "content": "This section focuses on protecting cloud resources and managing cost-efficient deployments."
+        }
+      ]
+    },
+    "notes": "Great for learners who want to understand cloud technology and prepare for infrastructure-focused roles."
   }
 ]
 `;
