@@ -42,5 +42,3 @@ if (FeaturedCourses) {
         }
     });
 }
-console.log(courses);
-console.log(FeaturedCourses);
