@@ -1,0 +1,152 @@
+[33m9b3da03[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m fixed teh auth
+[33md841353[m update
+[33m7e84f77[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33m852257b[m dashboard updated and done
+[33me20838e[m css of the dashboard
+[33m865794a[m fixed images
+[33m754f6ec[m fixed stuff related to public hosting
+[33maa66077[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33m0e7d85e[m fixed stuff
+[33mb2547ac[m Delete CNAME
+[33m1a5701f[m Create CNAME
+[33m1655ce6[m made the index outside the pages folder so the whole nav and footer are not working
+[33mb948f63[m change style.css
+[33m76c7935[m update
+[33m74ec588[m update
+[33m5886098[m data updated in the course details
+[33m226cf4e[m profile done last uptade
+[33m68e04bf[m update
+[33m1f6349e[m update
+[33m00594cf[m updated the meta SEO thingy
+[33m57897e4[m zabatet el footer lal kil
+[33m7b20d14[m update
+[33mc329536[m update to remove the profile if not logged in
+[33m97d173b[m main.js done
+[33m2ae38cb[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33m43ee5e4[m simple update to fix errors
+[33maf2218a[m her picture corrected
+[33m5ccb4a0[m simple update on the htmls and on the js of the index
+[33m192e284[m editing dome of teh design
+[33mebfb8bf[m update
+[33m1dbcc9e[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33mb4c6b5a[m update
+[33mec29990[m nevermind i removed my idea
+[33m6afe57a[m css of the notes
+[33m5e42e41[m still editing many things
+[33m33aa7ef[m update
+[33m89b5358[m returned to the last commit, ik i can do it using git but didnt want the risk
+[33m1f2c647[m changed the data of the courses
+[33m28dc233[m i had problems  fixed them and added some functions and  updatedthe html and css
+[33mf0cd95c[m updates about and auth
+[33m251f7ea[m added the end of teh module + attach events + not found render to the details
+[33m1d51efd[m added render module 1 +2 +  materials
+[33mb1a6c82[m addded teh get course + renderhero+render info +upfate modules2 functions
+[33mfb83b73[m inserted the data of the courses + initializations
+[33mf640893[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33mea2088e[m adding the media queries to the design
+[33m138f077[m update
+[33m4d0d48c[m also editin the details style
+[33mdfde184[m editing the style of the details
+[33me973086[m hmtl of details + css
+[33m1a52752[m still editing the html of the details page
+[33mf8faddd[m edited the html of the course details + created the js for it
+[33ma20c0b2[m mmmm
+[33ma3c9bf7[m changed the image of the hero
+[33m4b76b7c[m made the looks of the courses hero same as the home page
+[33m2d78b49[m again editing the margin and padding .. of the courses style
+[33m97a1a50[m editing the style of the courses page
+[33m76e11eb[m added  the toggle buttons + an image for the courses hero
+[33m75548f6[m edited the css of teh courses
+[33m3890fa2[m edited the html of the courses
+[33m70c7f90[m about
+[33m4f1b965[m update footer
+[33mdceb689[m update
+[33m70dda4e[m edite
+[33mcd58ef5[m edite background
+[33md8fa42d[m update the featured courses
+[33m65230be[m update featured coarses to display only the high rating
+[33m105dc2e[m home js done
+[33mbb27c45[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33m9f336c2[m some editing in cards
+[33m29be43e[m add js
+[33ma59cacd[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33me614c36[m update navbars and main page
+[33mea6c07a[m fixed the hieght of the cards to make them aligned
+[33m7d293fa[m changed the script call to data
+[33m3070979[m added the eventlistener + save button
+[33mdfa0359[m added the reset and render functions
+[33mfa55f94[m added the courses summary function
+[33m1ac70f3[m added the createcards function
+[33m7da6389[m edited some things
+[33md23b162[m did the getchecked values + getvisible functions
+[33mbd5c2f4[m added the courses databse + some initializations +images fro the data
+[33maa60c81[m fixed the width of the checkboxes they werent similar
+[33m39a37c3[m fixed something
+[33ma19eb6f[m design the courses cards
+[33m5b57d06[m designed the top controles of the courses page
+[33m8da7a19[m chnaged all the selectt-option filter into check boxes
+[33ma6c6b4b[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33m42697ed[m edited auth.html ,auth.css ,and auth.js
+[33m685f9fa[m DELETED SOMETHING
+[33me1e9d61[m Merge branch 'main' of https://github.com/AhmadMasalkhi/Proj_web
+[33m74eb57b[m Update About.html
+[33m9f9f146[m edited the profile grid form and sidebar , html and css
+[33meb0e4d0[m edited the profile page , added the user information form
+[33mbee6ca5[m added more filters in the courses page but i should edit how theyre represented later on
+[33m10adafa[m[33m ([m[1;31morigin/Ibrahim[m[33m, [m[1;32mIbrahim[m[33m)[m remove
+[33m6e6f6fc[m test
+[33m6c1a4d1[m test
+[33m6f3cdb3[m jarreb
+[33m72791ba[m update
+[33mfdd6ca4[m push
+[33meb8d0c5[m update
+[33mbb43f35[m update
+[33m799cdaf[m up
+[33m08e48cf[m u
+[33m71c2edb[m update
+[33m6a42edf[m testttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+[33m2278f66[m test
+[33m6758ce4[m testttttttttttttt
+[33mb962112[m Merge pull request #20 from AhmadMasalkhi/Ibrahim
+[33m9108742[m test
+[33mea9f5bf[m Merge pull request #19 from AhmadMasalkhi/Ibrahim
+[33m6341894[m update
+[33m2e25dc3[m Merge pull request #18 from AhmadMasalkhi/Ibrahim
+[33mcbbcb5f[m eee
+[33m540179c[m Merge pull request #17 from AhmadMasalkhi/Ibrahim
+[33m2b174b6[m test 2
+[33m1b18c60[m Testttt
+[33m99b4129[m Merge pull request #16 from AhmadMasalkhi/Ibrahim
+[33ma137c8e[m update
+[33mfef4c96[m Merge pull request #15 from AhmadMasalkhi/Ibrahim
+[33m501dff7[m update
+[33md7c0ce6[m Merge pull request #14 from AhmadMasalkhi/Ibrahim
+[33mdc666ee[m coarses updated plus about us html done
+[33mea402a7[m Merge pull request #13 from AhmadMasalkhi/Ibrahim
+[33m6435e2e[m coarses html updated and finished
+[33m95bc05c[m Merge pull request #12 from AhmadMasalkhi/Ibrahim
+[33m6d1b251[m update
+[33m5e1819d[m Merge pull request #11 from AhmadMasalkhi/Ibrahim
+[33mbec0e9b[m update
+[33mdcca892[m Merge pull request #10 from AhmadMasalkhi/Ibrahim
+[33mb4de729[m update
+[33m5b0541e[m Merge pull request #9 from AhmadMasalkhi/Ibrahim
+[33m9c051d8[m update
+[33m4ba2e40[m Merge pull request #8 from AhmadMasalkhi/Ibrahim
+[33mcb33b5d[m Everything updated
+[33m1a08b75[m Merge pull request #7 from AhmadMasalkhi/Ibrahim
+[33mc62bfd1[m Everything updated
+[33m8a7a255[m Merge pull request #6 from AhmadMasalkhi/Ibrahim
+[33m9aa7df8[m Everything related to home page and the main css done
+[33mec1e36c[m Merge pull request #5 from AhmadMasalkhi/Ibrahim
+[33m16b4f12[m Home done and pages recreated
+[33m0c5ae20[m Merge pull request #4 from AhmadMasalkhi/Ibrahim
+[33mf3aaa0f[m reset
+[33m5b2287d[m Merge pull request #3 from AhmadMasalkhi/Ibrahim
+[33m6ac6d31[m reset
+[33mdada706[m[33m ([m[1;31morigin/Ahmad[m[33m)[m Merge pull request #2 from AhmadMasalkhi/Ibrahim
+[33m24d99cd[m about page
+[33m30c653f[m Merge pull request #1 from AhmadMasalkhi/Ibrahim
+[33ma23301b[m home html
+[33mdee2bb4[m[33m ([m[1;31morigin/Ibrahim's-Branch[m[33m, [m[1;32mIbrahim's-Branch[m[33m)[m testing something
+[33m82017d0[m first commit
