@@ -30,7 +30,38 @@
 
 
 
+ <main class="PageSection" id="StudentDashboard">
+    <h1>Student Dashboard</h1>
 
+    <div class="SidebarLayout" style="margin-top:18px;">
+      <aside class="SidebarBox">
+        <h3 id="SidebarName">Student</h3>
+        <p>Logged in as <strong id="StudentEmail">-</strong></p>
+        <p class="CardText">Use this area to check your enrolled courses and progress.</p>
+      </aside>
+
+      <div class="MainDashboard">
+        <div id="StudentSummary" class="SummaryGrid"></div>
+
+        <section>
+          <h2>My Courses</h2>
+          <div id="EnrolledCourses" class="CardContainer"></div>
+        </section>
+
+        <section>
+          <h2>Completed Courses</h2>
+          <div id="CompletedCourses" class="CardContainer"></div>
+        </section>
+
+        <section class="Card">
+          <div class="CardBody">
+            <h2>Notifications</h2>
+            <ul id="StudentNotifications" class="PlainList NotificationList"></ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
 
 
 
@@ -59,6 +90,8 @@
       <p class="FooterCopy">© 2026 EduHub. All rights reserved.</p>
   </footer>
 
-
+<script src="../scripts/main.js"></script>
+<script src="../scripts/courses.js"></script>
+<script src="../scripts/dashboard.js"></script>
 </body>
 </html>

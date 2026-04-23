@@ -13,7 +13,7 @@
   padding: 60px 6%;
   text-align: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@
   font-size: 350%;
   text-align: center;
   position: relative;
-  left: 7%;
+  left: 1.5%;
 }
 
 .Hero p {
@@ -171,6 +171,7 @@
 
 @media (max-width: 768px) {
   .Hero h1 {
+    left: 9%;
     font-size: 200%;
     padding: 0 10%;
   }
