@@ -687,6 +687,98 @@ function handleSidebarClick(event) {
   renderSection(section);
 }
 
+function enrollInCourse(course) {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (!currentUser) {
+    alert("Please log in to enroll in courses.");
+    window.location.href = "auth.html";
+    return;
+  }
+
+  if (!currentUser.enrolledCourses) {
+    currentUser.enrolledCourses = [];
+  }
+
+  const alreadyEnrolled = currentUser.enrolledCourses.some(enrolled => enrolled.id === course.id);
+  if (alreadyEnrolled) {
+    alert("You are already enrolled in this course.");
+    return;
+  }
+
+  const enrolledCourse = {
+    id: course.id,
+    title: course.title,
+    instructor: course.instructor,
+    image: course.image,
+    progress: 0,
+    hours: 10
+  };
+
+  currentUser.enrolledCourses.push(enrolledCourse);
+
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const userIndex = users.findIndex(u => u.email === currentUser.email);
+  if (userIndex !== -1) {
+    users[userIndex] = currentUser;
+    localStorage.setItem("users", JSON.stringify(users));
+  }
+
+  alert("Successfully enrolled in " + course.title + "!");
+
+  let actionBtn = document.getElementById("EnrollBtn");
+  if (actionBtn) {
+    actionBtn.textContent = "Complete Course";
+    actionBtn.className = "Btn Btn3";
+    actionBtn.addEventListener("click", function() {
+      completeCourse(course);
+    });
+  }
+}
+
+function completeCourse(course) {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (!currentUser || !currentUser.enrolledCourses) {
+    return;
+  }
+
+
+  const courseIndex = currentUser.enrolledCourses.findIndex(enrolled => enrolled.id === course.id);
+  if (courseIndex === -1) {
+    return;
+  }
+
+
+  if (!currentUser.completedCourses) {
+    currentUser.completedCourses = [];
+  }
+  const completedCourse = {
+    id: course.id,
+    title: course.title,
+    instructor: course.instructor,
+    image: course.image,
+    completedDate: new Date().toLocaleDateString()
+  };
+
+  currentUser.completedCourses.push(completedCourse);
+  currentUser.enrolledCourses.splice(courseIndex, 1);
+
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const userIndex = users.findIndex(u => u.email === currentUser.email);
+  if (userIndex !== -1) {
+    users[userIndex] = currentUser;
+    localStorage.setItem("users", JSON.stringify(users));
+  }
+
+  alert("Congratulations! You have completed " + course.title + "!");
+  window.location.href = "student-dashboard.html";
+}
+
+
+
+
+
 getSelectedCourse();
 
 if (selectedCourse == null) {
@@ -697,4 +789,22 @@ else {
   updateModule2State();
   renderInfo();
   sidebarMenu.addEventListener("click", handleSidebarClick);
+  let actionBtn = document.getElementById("EnrollBtn");
+  if (actionBtn) {
+
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const alreadyEnrolled = currentUser && currentUser.enrolledCourses && currentUser.enrolledCourses.some(enrolled => enrolled.id === selectedCourse.id);
+  
+    if (alreadyEnrolled) {
+      actionBtn.textContent = "Complete Course";
+      actionBtn.className = "Btn Btn3";
+      actionBtn.addEventListener("click", function() {
+        completeCourse(selectedCourse);
+      });
+    } else {
+      actionBtn.addEventListener("click", function() {
+        enrollInCourse(selectedCourse);
+      });
+    }
+  }
 }

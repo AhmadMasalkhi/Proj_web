@@ -67,6 +67,16 @@
   text-align: center;
 }
 
+.SidebarActions {
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.SidebarActions .Btn {
+  width: 100%;
+}
+
 .SidebarMenu {
   display: grid;
   gap: 10px;
